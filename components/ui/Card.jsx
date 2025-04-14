@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Card = ({icon, header, body}) => {
   return (
-    <div className="w-[350px] h-[500px] bg-white rounded-xl shadow-md flex flex-col px-6 py-8 ">
+    <div className="w-[350px] h-fit bg-white rounded-xl shadow-md flex flex-col px-6 py-8 ">
         <div className="bg-brand-50 rounded-lg w-fit p-2 mb-6">
             <Image src={icon} alt='logo' />
         </div>
