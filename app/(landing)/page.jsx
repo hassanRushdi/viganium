@@ -1,4 +1,3 @@
-import Card from "@/components/ui/Card";
 import ContactsUsSection from "./ContactsUsSection";
 import HeroSection from "./HeroSection";
 
