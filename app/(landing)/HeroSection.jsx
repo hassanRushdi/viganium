@@ -14,7 +14,6 @@ import icon4 from '@/public/assets/icons/iconbr.svg'
 import Image from "next/image";
 
 const HeroSection = () => {
-  // Animation variants
   const slideFromTop = {
     hidden: { opacity: 0, y: -100 },
     visible: { opacity: 1, y: 0 }
@@ -42,98 +41,79 @@ const HeroSection = () => {
 
   return (
     <section className="w-[95%] mx-auto relative py-8 md:py-16 px-4 overflow-hidden">
-      {/* Circle with border icons - slides from top */}
+      {/* Circle icons */}
       <motion.div 
         initial="hidden"
         animate="visible"
         variants={slideFromTop}
-        transition={{ delay: 0, type: "spring", stiffness: 100 }}
+        transition={{ delay: 0, type: "spring", stiffness: 80, duration: 0.4 }}
         className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -translate-y-[60px] z-0"
       >
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] aspect-[1/1] max-w-none border border-[#D7CBCA] rounded-full z-0">
-          {/* Left icon 1 */}
+
           <motion.div 
             variants={slideFromLeft}
-            transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 80, duration: 0.4 }}
             className="absolute p-3 rounded-full shadow-sm bg-[#F7EAE9]" 
-            style={{ 
-              left: 'calc(50% - 50% * 0.9659)',
-              top: 'calc(50% - 50% * 0.2588)',
-              transform: 'translate(-50%, -50%)' 
-            }}
+            style={{ left: 'calc(50% - 50% * 0.9659)', top: 'calc(50% - 50% * 0.2588)', transform: 'translate(-50%, -50%)' }}
           >
-            <div className="w-6 h-6 rounded-full flex items-center justify-center">
+            <div className="w-6 h-6 flex items-center justify-center">
               <Image src={icon1} alt="SaaS icon" width={25} height={25} />
             </div>
           </motion.div>
-          
-          {/* Left icon 2 */}
+
           <motion.div 
             variants={slideFromLeft}
-            transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
-            className="absolute p-3 rounded-full shadow-sm bg-[#F7EAE9]"
-            style={{ 
-              left: 'calc(50% - 50% * 0.9659)',
-              top: 'calc(50% + 50% * 0.2588)',
-              transform: 'translate(-50%, -50%)' 
-            }}
+            transition={{ delay: 0.3, type: "spring", stiffness: 80, duration: 0.4 }}
+            className="absolute p-3 rounded-full shadow-sm bg-[#F7EAE9]" 
+            style={{ left: 'calc(50% - 50% * 0.9659)', top: 'calc(50% + 50% * 0.2588)', transform: 'translate(-50%, -50%)' }}
           >
-            <div className="w-6 h-6 rounded-full flex items-center justify-center">
-              <Image src={icon4} alt="Mobile dev icon" width={25} height={25} />
+            <div className="w-6 h-6 flex items-center justify-center">
+              <Image src={icon3} alt="Mobile dev icon" width={25} height={25} />
             </div>
           </motion.div>
-          
-          {/* Right icon 1 */}
+
           <motion.div 
             variants={slideFromRight}
-            transition={{ delay: 0.6, type: "spring", stiffness: 100 }}
-            className="absolute p-3 rounded-full shadow-sm bg-[#F7EAE9]"
-            style={{ 
-              left: 'calc(50% + 50% * 0.9659)',
-              top: 'calc(50% - 50% * 0.2588)',
-              transform: 'translate(-50%, -50%)' 
-            }}
+            transition={{ delay: 0.4, type: "spring", stiffness: 80, duration: 0.4 }}
+            className="absolute p-3 rounded-full shadow-sm bg-[#F7EAE9]" 
+            style={{ left: 'calc(50% + 50% * 0.9659)', top: 'calc(50% - 50% * 0.2588)', transform: 'translate(-50%, -50%)' }}
           >
-            <div className="w-6 h-6 rounded-full flex items-center justify-center">
+            <div className="w-6 h-6 flex items-center justify-center">
               <Image src={icon2} alt="Software icon" width={25} height={25} />
             </div>
           </motion.div>
-          
-          {/* Right icon 2 */}
+
           <motion.div 
             variants={slideFromRight}
-            transition={{ delay: 0.8, type: "spring", stiffness: 100 }}
-            className="absolute p-3 rounded-full shadow-sm bg-[#F7EAE9]"
-            style={{ 
-              left: 'calc(50% + 50% * 0.9659)',
-              top: 'calc(50% + 50% * 0.2588)',
-              transform: 'translate(-50%, -50%)' 
-            }}
+            transition={{ delay: 0.5, type: "spring", stiffness: 80, duration: 0.4 }}
+            className="absolute p-3 rounded-full shadow-sm bg-[#F7EAE9]" 
+            style={{ left: 'calc(50% + 50% * 0.9659)', top: 'calc(50% + 50% * 0.2588)', transform: 'translate(-50%, -50%)' }}
           >
-            <div className="w-6 h-6 rounded-full flex items-center justify-center">
+            <div className="w-6 h-6 flex items-center justify-center">
               <Image src={icon4} alt="AI icon" width={25} height={25} />
             </div>
           </motion.div>
         </div>
       </motion.div>
-      
-      {/* Logo - rotates in */}
+
+      {/* Logo */}
       <motion.div 
         initial="hidden"
         animate="visible"
         variants={rotateIn}
-        transition={{ delay: 5, type: "spring", stiffness: 100 }}
+        transition={{ delay: 0.6, type: "spring", stiffness: 80, duration: 0.4 }}
         className="relative z-10 mb-4 md:mb-6 flex justify-center"
       >
         <Image src={logo} alt="Logo" width={70} height={70} className="w-[70px] md:w-[90px]" />
       </motion.div>
-      
-      {/* Heading - slides from right */}
+
+      {/* Heading */}
       <motion.div 
         initial="hidden"
         animate="visible"
         variants={slideFromRight}
-        transition={{ delay: 4, type: "spring", stiffness: 100 }}
+        transition={{ delay: 0.8, type: "spring", stiffness: 80, duration: 0.4 }}
         className="flex justify-center items-center"
       >
         <h2 className="relative z-10 text-center text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-4 text-black max-w-[320px] sm:max-w-[580px]">
@@ -141,27 +121,26 @@ const HeroSection = () => {
           With Every Thing You Need
         </h2>
       </motion.div>
-      
-      {/* Subtitle - slides from right */}
+
+      {/* Subtitle */}
       <motion.p 
         initial="hidden"
         animate="visible"
         variants={slideFromRight}
-        transition={{ delay: 4.5, type: "spring", stiffness: 100 }}
+        transition={{ delay: 1.0, type: "spring", stiffness: 80, duration: 0.4 }}
         className="relative z-10 text-gray max-w-xs sm:max-w-md md:max-w-2xl mx-auto mb-6 md:mb-10 text-center text-sm md:text-base"
       >
         We build custom software, mobile apps, and digital platforms that help businesses grow, streamline
         operations, and engage their customers.
       </motion.p>
-      
-      {/* Main content grid */}
+
       <div className="relative z-10 flex flex-col items-center gap-6 md:gap-8">
-        {/* Mobile Hero Image - scales up */}
+        {/* Mobile Image */}
         <motion.div 
           initial="hidden"
           animate="visible"
           variants={scaleUp}
-          transition={{ delay: 1, type: "spring", stiffness: 100 }}
+          transition={{ delay: 1.2, type: "spring", stiffness: 80, duration: 0.4 }}
           className="mb-6 md:hidden relative z-10"
         >
           <Image 
@@ -171,17 +150,15 @@ const HeroSection = () => {
             className="w-full max-w-[300px]"
           />
         </motion.div>
-        
-        {/* Desktop layout */}
+
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-6">
           {/* Left Cards */}
           <div className="flex flex-col gap-4 md:gap-6 w-full sm:w-auto">
-            {/* Top left card - slides from left */}
             <motion.div
               initial="hidden"
               animate="visible"
               variants={slideFromLeft}
-              transition={{ delay: 2, type: "spring", stiffness: 100 }}
+              transition={{ delay: 1.4, type: "spring", stiffness: 80, duration: 0.4 }}
             >
               <Card
                 icon={saas}
@@ -189,13 +166,12 @@ const HeroSection = () => {
                 body="These platforms are designed for ease of use, high availability, and customization to meet specific business requirements."
               />
             </motion.div>
-            
-            {/* Bottom left card - slides from left */}
+
             <motion.div
               initial="hidden"
               animate="visible"
               variants={slideFromLeft}
-              transition={{ delay: 3, type: "spring", stiffness: 100 }}
+              transition={{ delay: 1.6, type: "spring", stiffness: 80, duration: 0.4 }}
             >
               <Card
                 icon={mobDev}
@@ -204,13 +180,13 @@ const HeroSection = () => {
               />
             </motion.div>
           </div>
-          
-          {/* Desktop Hero Image - scales up */}
+
+          {/* Desktop Image */}
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={scaleUp}
-            transition={{ delay: 1, type: "spring", stiffness: 100 }}
+            transition={{ delay: 1.8, type: "spring", stiffness: 80, duration: 0.4 }}
             className="hidden md:block mx-4 relative z-10"
           >
             <Image 
@@ -219,15 +195,14 @@ const HeroSection = () => {
               className="w-[300px] lg:w-[500px]"
             />
           </motion.div>
-          
+
           {/* Right Cards */}
           <div className="flex flex-col gap-4 md:gap-6 w-full sm:w-auto">
-            {/* Top right card - slides from right */}
             <motion.div
               initial="hidden"
               animate="visible"
               variants={slideFromRight}
-              transition={{ delay: 2.2, type: "spring", stiffness: 100 }}
+              transition={{ delay: 2.0, type: "spring", stiffness: 80, duration: 0.4 }}
             >
               <Card
                 icon={software}
@@ -235,13 +210,12 @@ const HeroSection = () => {
                 body="We specialize in custom software development, delivering tailored solutions across various industries."
               />
             </motion.div>
-            
-            {/* Bottom right card - slides from right */}
+
             <motion.div
               initial="hidden"
               animate="visible"
               variants={slideFromRight}
-              transition={{ delay: 3.2, type: "spring", stiffness: 100 }}
+              transition={{ delay: 2.2, type: "spring", stiffness: 80, duration: 0.4 }}
             >
               <Card
                 icon={ai}
