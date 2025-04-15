@@ -48,7 +48,6 @@ const ContactsUsSection = () => {
     },
   };
 
-  // Trigger animations manually in sequence
   useEffect(() => {
     const runSequence = async () => {
       await containerControls.start("visible");
