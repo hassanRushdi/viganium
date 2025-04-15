@@ -61,6 +61,22 @@ const ContactsUsSection = () => {
     runSequence();
   }, [containerControls, headerControls]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    const form = e.target;
+    const name = form.name.value;
+    const phone = form.phone.value;
+    const email = form.email.value;
+    const company = form.company.value;
+    const message = form.message.value;
+  
+    const mailtoLink = `mailto:info@viganium.com?subject=Contact%20From%20${name}&body=Name: ${name}%0APhone: ${phone}%0AEmail: ${email}%0ACompany: ${company}%0AMessage: ${message}`;
+    
+    window.location.href = mailtoLink;
+  };
+  
+
   return (
     <div className="py-16">
       {/* Header */}
@@ -81,7 +97,7 @@ const ContactsUsSection = () => {
         {/* Left Side */}
         <motion.div
           className="space-y-6 border-l-4 border-brand-900 pl-6 pt-10"
-          variants={containerVariants}
+          variants={containerVariants}  
         >
           <motion.div className="w-[320px]" variants={leftItemVariants}>
             <h3 className="text-lg mb-4">Address</h3>
@@ -90,23 +106,36 @@ const ContactsUsSection = () => {
             </p>
           </motion.div>
 
-          <motion.div className="w-[320px]" variants={leftItemVariants}>
-            <h3 className="text-lg mb-4">Address</h3>
-            <p className="text-[#8E8E8E] leading-8">
-              Saudi Arabia, Riyadh, Al-Malz Neighborhood, Fatima Al-Zahra
-              Street, Building No. 5
-            </p>
-          </motion.div>
-
           <motion.div variants={leftItemVariants}>
-            <h3 className="text-lg mb-4">Mail</h3>
-            <p className="text-[#8E8E8E] leading-8">Viganium@Gmail.Com</p>
+            <h3 className="text-lg mb-4">E-mail</h3>
+            <a 
+              href="mailto:info@viganium.com" 
+              className="text-[#8E8E8E] leading-8 hover:text-brand-900 transition-colors"
+            >
+              info@viganium.com
+            </a>
           </motion.div>
 
           <motion.div variants={leftItemVariants}>
             <h3 className="text-lg mb-4">Phone</h3>
-            <p className="text-[#8E8E8E] leading-8">+20 111 5893 336</p>
-            <p className="text-[#8E8E8E] leading-8">+20 111 5893 336</p>
+            <a 
+              href="tel:+201115893336" 
+              className="text-[#8E8E8E] leading-8 hover:text-brand-900 transition-colors"
+            >
+              +20 111 5893 336
+            </a>
+          </motion.div>
+          
+          <motion.div variants={leftItemVariants}>
+            <h3 className="text-lg mb-4">WhatsApp</h3>
+            <a 
+              href="https://wa.me/201115893336" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#8E8E8E] leading-8 hover:text-brand-900 transition-colors"
+            >
+              +20 111 5893 336
+            </a>
           </motion.div>
 
           <motion.div variants={leftItemVariants}>
@@ -128,11 +157,13 @@ const ContactsUsSection = () => {
         </motion.div>
 
         {/* Right Side - Form */}
-        <motion.form className="space-y-7" variants={containerVariants}>
+        <motion.form className="space-y-7" variants={containerVariants} onSubmit={handleSubmit}>
           <motion.div variants={rightItemVariants}>
             <label className="block text-lg mb-3">Name</label>
             <input
               type="text"
+              name="name"
+              required
               placeholder="Name"
               className="w-full border-2 border-[#D2D2D2] rounded-lg focus:outline-none focus:border-[#616161] px-4 py-2 transition-colors"
             />
@@ -142,6 +173,8 @@ const ContactsUsSection = () => {
             <label className="block text-lg mb-3">Phone Number</label>
             <input
               type="tel"
+              name="phone"
+              required
               placeholder="Phone Number"
               className="w-full border-2 border-[#D2D2D2] focus:outline-none focus:border-[#616161] rounded-lg px-4 py-2 transition-colors"
             />
@@ -151,6 +184,8 @@ const ContactsUsSection = () => {
             <label className="block text-lg mb-3">E-Mail</label>
             <input
               type="email"
+              name="email"
+              required
               placeholder="Example@Gmail.Com"
               className="w-full border-2 border-[#D2D2D2] focus:outline-none focus:border-[#616161] rounded-lg px-4 py-2 transition-colors"
             />
@@ -160,6 +195,8 @@ const ContactsUsSection = () => {
             <label className="block text-lg mb-3">Company Name</label>
             <input
               type="text"
+              name="company"
+              required
               placeholder="Company Name"
               className="w-full border-2 border-[#D2D2D2] focus:outline-none focus:border-[#616161] rounded-lg px-4 py-2 transition-colors"
             />
@@ -169,6 +206,8 @@ const ContactsUsSection = () => {
             <label className="block text-lg mb-3">Message</label>
             <textarea
               rows={4}
+              name="message"
+              required
               placeholder="Let Your Message Here"
               className="w-full border-2 border-[#D2D2D2] focus:outline-none focus:border-[#616161] rounded-lg px-4 py-2 transition-colors"
             />

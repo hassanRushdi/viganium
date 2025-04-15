@@ -166,6 +166,7 @@ const HeroSection = () => {
         >
           <Image 
             src={heroImage} 
+            priority
             alt="Digital workspace illustration" 
             className="w-full max-w-[300px]"
           />
