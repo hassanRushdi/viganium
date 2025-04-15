@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useEffect } from "react";
 import Image from "next/image";
 import snapChat from "@/public/assets/icons/social/snapchat.svg";
@@ -63,19 +63,18 @@ const ContactsUsSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     const form = e.target;
     const name = form.name.value;
     const phone = form.phone.value;
     const email = form.email.value;
     const company = form.company.value;
     const message = form.message.value;
-  
+
     const mailtoLink = `mailto:info@viganium.com?subject=Contact%20From%20${name}&body=Name: ${name}%0APhone: ${phone}%0AEmail: ${email}%0ACompany: ${company}%0AMessage: ${message}`;
-    
+
     window.location.href = mailtoLink;
   };
-  
 
   return (
     <div className="py-16">
@@ -97,19 +96,24 @@ const ContactsUsSection = () => {
         {/* Left Side */}
         <motion.div
           className="space-y-6 border-l-4 border-brand-900 pl-6 pt-10"
-          variants={containerVariants}  
+          variants={containerVariants}
         >
           <motion.div className="w-[320px]" variants={leftItemVariants}>
             <h3 className="text-lg mb-4">Address</h3>
-            <p className="text-[#8E8E8E] leading-8">
-              8 T N Sama Tower, The Ring Road, Fourth Floor, Office 43.
-            </p>
+            <a
+              href="https://www.google.com/maps?q=8+T+N+Sama+Tower,+The+Ring+Road,+Cairo,+Egypt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#8E8E8E] leading-8  hover:text-brand-900 transition-colors"
+            >
+              8 T N Sama Tower, The Ring Road, Cairo, Egypt.
+            </a>
           </motion.div>
 
           <motion.div variants={leftItemVariants}>
             <h3 className="text-lg mb-4">E-mail</h3>
-            <a 
-              href="mailto:info@viganium.com" 
+            <a
+              href="mailto:info@viganium.com"
               className="text-[#8E8E8E] leading-8 hover:text-brand-900 transition-colors"
             >
               info@viganium.com
@@ -118,19 +122,19 @@ const ContactsUsSection = () => {
 
           <motion.div variants={leftItemVariants}>
             <h3 className="text-lg mb-4">Phone</h3>
-            <a 
-              href="tel:+201115893336" 
+            <a
+              href="tel:+201115893336"
               className="text-[#8E8E8E] leading-8 hover:text-brand-900 transition-colors"
             >
               +20 111 5893 336
             </a>
           </motion.div>
-          
+
           <motion.div variants={leftItemVariants}>
             <h3 className="text-lg mb-4">WhatsApp</h3>
-            <a 
-              href="https://wa.me/201115893336" 
-              target="_blank" 
+            <a
+              href="https://wa.me/201115893336"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-[#8E8E8E] leading-8 hover:text-brand-900 transition-colors"
             >
@@ -157,7 +161,11 @@ const ContactsUsSection = () => {
         </motion.div>
 
         {/* Right Side - Form */}
-        <motion.form className="space-y-7" variants={containerVariants} onSubmit={handleSubmit}>
+        <motion.form
+          className="space-y-7"
+          variants={containerVariants}
+          onSubmit={handleSubmit}
+        >
           <motion.div variants={rightItemVariants}>
             <label className="block text-lg mb-3">Name</label>
             <input
