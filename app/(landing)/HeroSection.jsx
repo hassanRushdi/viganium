@@ -151,9 +151,9 @@ const HeroSection = () => {
           />
         </motion.div>
 
-        <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-6">
+        <div className="w-full flex flex-col items-center gap-6 lg:flex-row lg:justify-center lg:items-start">
           {/* Left Cards */}
-          <div className="flex flex-col gap-4 md:gap-6 w-full sm:w-auto">
+          <div className="flex flex-col gap-4 md:gap-6 w-full sm:w-auto items-center">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -197,7 +197,7 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Right Cards */}
-          <div className="flex flex-col gap-4 md:gap-6 w-full sm:w-auto">
+          <div className="flex flex-col gap-4 md:gap-6 w-full sm:w-auto items-center">
             <motion.div
               initial="hidden"
               animate="visible"

@@ -77,10 +77,10 @@ const ContactsUsSection = () => {
   };
 
   return (
-    <div className="py-16">
+    <div className="py-8 md:py-16 px-4 sm:px-6 lg:px-1">
       {/* Header */}
       <motion.h2
-        className="text-3xl font-bold text-center mb-12"
+        className="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={headerControls}
       >
@@ -88,72 +88,72 @@ const ContactsUsSection = () => {
       </motion.h2>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-12"
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full"
         initial="hidden"
         animate={containerControls}
         variants={containerVariants}
       >
         {/* Left Side */}
         <motion.div
-          className="space-y-6 border-l-4 border-brand-900 pl-6 pt-10"
+          className="space-y-4 md:space-y-6 border-l-2 md:border-l-4 border-brand-900 pl-4 md:pl-6 pt-6 md:pt-10"
           variants={containerVariants}
         >
-          <motion.div className="w-[320px]" variants={leftItemVariants}>
-            <h3 className="text-lg mb-4">Address</h3>
+          <motion.div className="w-full sm:w-[320px]" variants={leftItemVariants}>
+            <h3 className="text-base sm:text-lg mb-2 sm:mb-4">Address</h3>
             <a
               href="https://www.google.com/maps?q=8+T+N+Sama+Tower,+The+Ring+Road,+Cairo,+Egypt"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#8E8E8E] leading-8  hover:text-brand-900 transition-colors"
+              className="text-[#8E8E8E] text-sm sm:text-base leading-6 sm:leading-8 hover:text-brand-900 transition-colors"
             >
               8 T N Sama Tower, The Ring Road, Cairo, Egypt.
             </a>
           </motion.div>
 
           <motion.div variants={leftItemVariants}>
-            <h3 className="text-lg mb-4">E-mail</h3>
+            <h3 className="text-base sm:text-lg mb-2 sm:mb-4">E-mail</h3>
             <a
               href="mailto:info@viganium.com"
-              className="text-[#8E8E8E] leading-8 hover:text-brand-900 transition-colors"
+              className="text-[#8E8E8E] text-sm sm:text-base leading-6 sm:leading-8 hover:text-brand-900 transition-colors"
             >
               info@viganium.com
             </a>
           </motion.div>
 
           <motion.div variants={leftItemVariants}>
-            <h3 className="text-lg mb-4">Phone</h3>
+            <h3 className="text-base sm:text-lg mb-2 sm:mb-4">Phone</h3>
             <a
               href="tel:+201115893336"
-              className="text-[#8E8E8E] leading-8 hover:text-brand-900 transition-colors"
+              className="text-[#8E8E8E] text-sm sm:text-base leading-6 sm:leading-8 hover:text-brand-900 transition-colors"
             >
               +20 111 5893 336
             </a>
           </motion.div>
 
           <motion.div variants={leftItemVariants}>
-            <h3 className="text-lg mb-4">WhatsApp</h3>
+            <h3 className="text-base sm:text-lg mb-2 sm:mb-4">WhatsApp</h3>
             <a
               href="https://wa.me/201115893336"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#8E8E8E] leading-8 hover:text-brand-900 transition-colors"
+              className="text-[#8E8E8E] text-sm sm:text-base leading-6 sm:leading-8 hover:text-brand-900 transition-colors"
             >
               +20 111 5893 336
             </a>
           </motion.div>
 
           <motion.div variants={leftItemVariants}>
-            <h3 className="text-lg mb-4">Social Media</h3>
+            <h3 className="text-base sm:text-lg mb-2 sm:mb-4">Social Media</h3>
             <motion.div
-              className="flex space-x-4 mt-2 mb-4"
+              className="flex space-x-3 sm:space-x-4 mt-2 mb-4"
               variants={leftItemVariants}
             >
               {[snapChat, x, instagram, linkedin].map((icon, idx) => (
                 <div
                   key={idx}
-                  className="bg-brand-50 rounded-lg w-fit p-2 mb-6 cursor-pointer hover:bg-brand-100 transition-colors"
+                  className="bg-brand-50 rounded-lg w-fit p-1.5 sm:p-2 mb-4 sm:mb-6 cursor-pointer hover:bg-brand-100 transition-colors"
                 >
-                  <Image src={icon} alt="icon" width={25} />
+                  <Image src={icon} alt="icon" width={20} className="w-5 sm:w-6" />
                 </div>
               ))}
             </motion.div>
@@ -162,69 +162,69 @@ const ContactsUsSection = () => {
 
         {/* Right Side - Form */}
         <motion.form
-          className="space-y-7"
+          className="space-y-4 sm:space-y-7"
           variants={containerVariants}
           onSubmit={handleSubmit}
         >
           <motion.div variants={rightItemVariants}>
-            <label className="block text-lg mb-3">Name</label>
+            <label className="block text-base sm:text-lg mb-2 sm:mb-3">Name</label>
             <input
               type="text"
               name="name"
               required
               placeholder="Name"
-              className="w-full border-2 border-[#D2D2D2] rounded-lg focus:outline-none focus:border-[#616161] px-4 py-2 transition-colors"
+              className="w-full border border-[#D2D2D2] sm:border-2 rounded-lg focus:outline-none focus:border-[#616161] px-3 sm:px-4 py-1.5 sm:py-2 transition-colors text-sm sm:text-base"
             />
           </motion.div>
 
           <motion.div variants={rightItemVariants}>
-            <label className="block text-lg mb-3">Phone Number</label>
+            <label className="block text-base sm:text-lg mb-2 sm:mb-3">Phone Number</label>
             <input
               type="tel"
               name="phone"
               required
               placeholder="Phone Number"
-              className="w-full border-2 border-[#D2D2D2] focus:outline-none focus:border-[#616161] rounded-lg px-4 py-2 transition-colors"
+              className="w-full border border-[#D2D2D2] sm:border-2 focus:outline-none focus:border-[#616161] rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 transition-colors text-sm sm:text-base"
             />
           </motion.div>
 
           <motion.div variants={rightItemVariants}>
-            <label className="block text-lg mb-3">E-Mail</label>
+            <label className="block text-base sm:text-lg mb-2 sm:mb-3">E-Mail</label>
             <input
               type="email"
               name="email"
               required
               placeholder="Example@Gmail.Com"
-              className="w-full border-2 border-[#D2D2D2] focus:outline-none focus:border-[#616161] rounded-lg px-4 py-2 transition-colors"
+              className="w-full border border-[#D2D2D2] sm:border-2 focus:outline-none focus:border-[#616161] rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 transition-colors text-sm sm:text-base"
             />
           </motion.div>
 
           <motion.div variants={rightItemVariants}>
-            <label className="block text-lg mb-3">Company Name</label>
+            <label className="block text-base sm:text-lg mb-2 sm:mb-3">Company Name</label>
             <input
               type="text"
               name="company"
               required
               placeholder="Company Name"
-              className="w-full border-2 border-[#D2D2D2] focus:outline-none focus:border-[#616161] rounded-lg px-4 py-2 transition-colors"
+              className="w-full border border-[#D2D2D2] sm:border-2 focus:outline-none focus:border-[#616161] rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 transition-colors text-sm sm:text-base"
             />
           </motion.div>
 
           <motion.div variants={rightItemVariants}>
-            <label className="block text-lg mb-3">Message</label>
+            <label className="block text-base sm:text-lg mb-2 sm:mb-3">Message</label>
             <textarea
               rows={4}
               name="message"
               required
               placeholder="Let Your Message Here"
-              className="w-full border-2 border-[#D2D2D2] focus:outline-none focus:border-[#616161] rounded-lg px-4 py-2 transition-colors"
+              className="w-full border border-[#D2D2D2] sm:border-2 focus:outline-none focus:border-[#616161] rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 transition-colors text-sm sm:text-base"
             />
           </motion.div>
 
           <motion.div variants={rightItemVariants}>
             <button
               type="submit"
-              className="bg-black font-semibold text-white px-6 py-3 rounded-lg w-full hover:bg-gray-800 transition-colors"
+              className="bg-black font-semibold text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg w-full hover:bg-gray-800 transition-colors text-sm sm:text-base"
             >
               Send Message
             </button>
