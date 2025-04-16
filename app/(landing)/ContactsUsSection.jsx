@@ -194,7 +194,7 @@ const ContactsUsSection = () => {
               type="email"
               name="email"
               required
-              placeholder="Example@Gmail.Com"
+              placeholder="example@gmail.com"
               className="w-full border border-[#D2D2D2] sm:border-2 focus:outline-none focus:border-[#616161] rounded-lg px-3 sm:px-4 py-1.5 sm:py-2 transition-colors text-sm sm:text-base"
             />
           </motion.div>
