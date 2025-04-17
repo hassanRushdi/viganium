@@ -1,11 +1,11 @@
 import React from "react";
 
-const TermsPage = () => {
+const PrivacyPage = () => {
   return (
     <section className="w-[80%] mx-auto px-4 py-12">
       <h2 className="text-3xl font-semibold text-center mb-2">
-        <span className="text-brand-900">Terms</span>{" "}
-        <span>And Conditions</span>
+        <span className="text-brand-900">Privacy</span>{" "}
+        <span>And Policy</span>
       </h2>
       <div className="w-10 h-1 bg-brand-900 mx-auto mb-10 rounded" />
 
@@ -56,4 +56,4 @@ const TermsPage = () => {
   );
 };
 
-export default TermsPage;
+export default PrivacyPage;

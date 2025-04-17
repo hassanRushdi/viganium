@@ -51,7 +51,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-12 relative">
+    <section className="py-12 relative bg-[#F5F5F5]">
       {/* Decorative circles */}
       <div className="absolute right-1/4 top-0">
         <div className="h-16 w-16 rounded-full border-2 border-teal-100"></div>
