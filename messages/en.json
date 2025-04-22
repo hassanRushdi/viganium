@@ -180,5 +180,38 @@
     "visionDescription": "Our vision is to lead the charge in digital transformation by developing pioneering solutions that shape the future. We envision a world where our expertise in web and mobile developments, AI, blockchain, machine learning, and mobile app management empowers businesses across industries to embrace innovation, optimize operations, and create lasting value.",
     "historyTitle": "Our History",
     "historyDescription": "Viganium was founded in 2014, born out of a passion for innovation and a commitment to solving complex business challenges through technology. Established by a team of seasoned software developers and entrepreneurs, the company was created with a vision to provide cutting-edge software solutions tailored to meet the evolving needs of modern businesses. The idea for Vigtas emerged when the founders noticed a growing gap in the market for reliable, scalable, and customizable software solutions. This realization led them to form a company that would not only meet but exceed the expectations of clients across various industries. Since its inception, Vigtas has focused on delivering high-quality software that empowers businesses to streamline operations, enhance productivity, and drive growth. With a commitment to excellence and innovation, Vigtas has grown steadily, developing a reputation for delivering value-driven solutions and exceptional customer service. Today, Vigtas stands as a trusted technology partner for companies looking to stay ahead in an ever-evolving digital landscape."
+  },
+  "techSection": {
+    "title": "Our Technology",
+    "items": {
+      "React": {
+        "title": "React",
+        "description": "For front-end development, React allows us to build interactive and dynamic user interfaces. Its component-based architecture ensures that we can create fast, scalable, and maintainable web applications, enhancing the overall user experience."
+      },
+      "Python": {
+        "title": "Python",
+        "description": "Python is our go-to language for data analysis, automation, and AI-driven solutions. Its simplicity and powerful libraries make it an excellent choice for developing machine learning applications, data processing pipelines, and backend services."
+      },
+      "Kotlin": {
+        "title": "Kotlin",
+        "description": "Kotlin is our language of choice for Android app development. Its compatibility with Java and modern language features allows us to build more efficient, reliable, and concise Android applications."
+      },
+      "Swift": {
+        "title": "Swift",
+        "description": "We use Swift for building powerful, native iOS applications. Swift enables us to develop apps with exceptional performance, security, and user experience, making it the perfect choice for iOS-exclusive projects."
+      },
+      "Flutter": {
+        "title": "Flutter",
+        "description": "Flutter is our preferred tool for cross-platform mobile app development. With Flutter, we create high-performance mobile apps that work seamlessly on both Android and iOS devices, reducing development time while ensuring native-like performance."
+      },
+      "Java": {
+        "title": "Java",
+        "description": "Java is a cornerstone of our backend development, allowing us to create robust, scalable, and secure applications for enterprise-level solutions. Its versatility and reliability make it ideal for large-scale systems."
+      },
+      "PHP": {
+        "title": "PHP",
+        "description": "We use PHP for dynamic web development, building flexible and efficient websites and platforms. Whether developing E-Commerce sites or custom web solutions, PHP provides the speed and scalability needed for modern web applications."
+      }
+    }
   }
 }
