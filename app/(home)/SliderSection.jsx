@@ -60,51 +60,54 @@ export default function SliderSection() {
           <div className="bg-white p-6 shadow-lg">
             <h2 className="text-2xl font-bold mb-3">{slides[current].title}</h2>
             <div className="h-1 w-16 bg-red-600 mb-5" />
-            <p className="text-gray-700 mb-6 ">{slides[current].description}</p>
+            <p className="text-gray-700 mb-6">{slides[current].description}</p>
             <button className="bg-gray-700 text-white px-6 py-3 rounded hover:bg-gray-800 transition">
               Read More
             </button>
           </div>
         </div>
 
-        {/* Desktop Layout with overlapping containers and shifted left container */}
+        {/* Desktop Layout with overlapping containers in centered position */}
         <div className="hidden md:block relative">
-          <div className="flex justify-center ">
-            {/* Image Container - Left Side (positioned more to the left) */}
-            <div className="relative w-[560px] h-[360px] right-[200px] ">
-              <Image
-                src={slides[current].image}
-                alt={slides[current].title}
-                fill
-                className="object-cover"
-                sizes="60vw"
-                priority
-              />
-            </div>
-
-            {/* Content Container - Right Side (overlapping the image) */}
-            <div className="absolute right-[160px] top-[95px] w-[560px] h-[329px] bg-white p-10 shadow-lg flex flex-col">
-              <div className="flex-grow">
-                {" "}
-                {/* This will take up all available space, pushing the button down */}
-                <h2 className="text-[28px] font-[500] mb-4">
-                  {slides[current].title}
-                </h2>
-                <div className="h-1 w-16 bg-red-600 mb-6" />
-                <p className="text-[#1E1E1E] text-[16px] font-[400] leading-[32px]">
-                  {slides[current].description}
-                </p>
+          <div className="relative flex justify-center h-[450px]">
+            {/* Center positioning container */}
+            <div className="relative max-w-5xl w-full">
+              {/* Image Container - Left Side */}
+              <div className="absolute left-0 w-[55%] h-[360px] z-10">
+                <Image
+                  src={slides[current].image}
+                  alt={slides[current].title}
+                  fill
+                  className="object-cover"
+                  sizes="55vw"
+                  priority
+                />
               </div>
-              <button className="bg-black py-2 text-white px-6 rounded w-fit hover:bg-gray-800 transition mt-auto">
-                Read More
-              </button>
+
+              {/* Content Container - Right Side (overlapping) */}
+              <div className="absolute right-0 top-[95px] w-[55%] h-[329px] bg-white p-8 lg:p-10 shadow-lg flex flex-col justify-between z-20">
+  <div>
+    <h2 className="text-2xl lg:text-[28px] font-medium mb-4">
+      {slides[current].title}
+    </h2>
+    <div className="h-1 w-16 bg-red-600 mb-6" />
+    <p className="text-[#1E1E1E] text-base lg:text-[16px] font-normal leading-relaxed lg:leading-[32px] overflow-y-auto max-h-[140px]">
+      {slides[current].description}
+    </p>
+  </div>
+  <div>
+    <button className="bg-black py-2 text-white px-6 rounded w-fit hover:bg-gray-800 transition">
+      Read More
+    </button>
+  </div>
+</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Navigation Arrows */}
-      <div className="hidden md:flex absolute top-1/2 left-0 right-0 transform -translate-y-1/2 justify-between px-8 z-10">
+      <div className="hidden md:flex absolute top-1/2 left-0 right-0 transform -translate-y-1/2 justify-between px-8 z-30">
         <button
           onClick={prev}
           className="bg-white p-2 rounded-full shadow hover:bg-gray-200 transition pointer-events-auto"
