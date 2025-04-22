@@ -9,11 +9,16 @@ import logo from "@/public/assets/images/logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Function to close mobile menu
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="bg-[#1E1E1E] text-white px-5 md:px-7 py-5 flex items-center justify-between relative">
       {/* Logo */}
       <div className="flex items-center z-20">
-        <Link href="/home" className="flex items-center">
+        <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
           <Image src={logo} alt="Viganium Logo" width={44} height={44} />
           <p className="font-semibold text-lg px-[1.3px]">Iganium</p>
         </Link>
@@ -24,7 +29,7 @@ const Navbar = () => {
         {["Home", "Services", "About"].map((link, index) => (
           <Link
             key={index}
-            href={`/home${link === 'Home' ? '' : `/${link.toLowerCase()}`}`}
+            href={`${link === 'Home' ? '/' : `/${link.toLowerCase()}`}`}
             className="hover:text-brand-600 transition-colors relative group inline-flex flex-col items-center"
           >
             {link}
@@ -72,15 +77,17 @@ const Navbar = () => {
           {["Home", "Services", "About"].map((link, index) => (
             <Link
               key={index}
-              href={`/home${link === 'Home' ? '' : `/${link.toLowerCase()}`}`}
-              className="hover:text-brand-600 font-semibold transition-colors"
+              href={`${link === 'Home' ? '/' : `/${link.toLowerCase()}`}`}
+              className="hover:text-brand-600 font-semibold transition-colors w-full"
+              onClick={closeMobileMenu}
             >
               {link}
             </Link>
           ))}
           <Link
             href="/contact-us"
-            className="bg-[#BB413D] hover:bg-brand-900 font-semibold transition-colors text-white px-4 py-2 rounded"
+            className="bg-[#BB413D] hover:bg-brand-900 font-semibold transition-colors text-white px-4 py-2 rounded w-full text-center"
+            onClick={closeMobileMenu}
           >
             Contact Us
           </Link>

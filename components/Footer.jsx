@@ -61,8 +61,8 @@ const Footer = () => {
                 <Link
                   href={
                     item === "Home"
-                      ? "/home"
-                      : `/home/${item.toLowerCase().replace(/ /g, "-")}`
+                      ? "/"
+                      : `/${item.toLowerCase().replace(/ /g, "-")}`
                   }
                   className="hover:text-red-600 transition-colors"
                 >

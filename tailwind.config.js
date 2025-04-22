@@ -19,7 +19,7 @@ module.exports = {
         "brand-100" : '#F0D5D4',
         "brand-50" : '#F7EAE9',
         black: '#1E1E1E',
-        gray: '#A5A5A5'
+        // gray: '#A5A5A5'
       }
     },
   },
