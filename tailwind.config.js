@@ -26,6 +26,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('rtl', '[dir="rtl"] &')
+    }
+  ],
 }
 

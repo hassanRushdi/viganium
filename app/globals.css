@@ -22,5 +22,27 @@
   @apply text-white font-semibold bg-[#4B4B4B] px-[24px] py-[10px] rounded-md my-5 hover:bg-black transition-all leading-[32px]
 }
 
+/* -------------------------- */
+
+html[dir="rtl"] {
+  text-align: right;
+}
+
+/* Reverse flex direction for RTL layouts */
+  html[dir="rtl"] .rtl-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+/* Keep the navbar menu items in their original order */
+html[dir="rtl"] .md\:flex.absolute {
+  flex-direction: row;
+}
+
+/* Adjust margins for RTL */
+html[dir="rtl"] .ml-1 {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+
 
 

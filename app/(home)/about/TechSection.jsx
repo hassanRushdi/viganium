@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { motion, useAnimation, PanInfo } from "framer-motion";
+import { useEffect, useState } from "react";
 import flutter from "@/public/assets/icons/about/tech/flutter.svg";
 import swift from "@/public/assets/icons/about/tech/swift.svg";
 import java from "@/public/assets/icons/about/tech/java.svg";
@@ -26,7 +26,7 @@ const technologies = [
   {
     title: "Kotlin",
     icon: kotlin,
-    description: "Kotlin is our language of choice for Android app development. Its compatibility with Java and modern language features allows us to build more efficient, reliable,",
+    description: "Kotlin is our language of choice for Android app development. Its compatibility with Java and modern language features allows us to build more efficient, reliable, and concise Android applications.",
   },
   {
     title: "Swift",
@@ -36,12 +36,12 @@ const technologies = [
   {
     title: "Flutter",
     icon: flutter,
-    description: "Flutter is our preferred tool for cross-platform mobile app development. With Flutter, we create high-performance mobile apps that work seamlessly on both Android and iOS devices, reducing development time while ensuring native ",
+    description: "Flutter is our preferred tool for cross-platform mobile app development. With Flutter, we create high-performance mobile apps that work seamlessly on both Android and iOS devices, reducing development time while ensuring native-like performance.",
   },
   {
     title: "Java",
     icon: java,
-    description: "Java is a cornerstone of our backend development, allowing us to create robust, scalable, and secure applications for enterprise-level solutions. Its versatility and reliability make it ideal for large-scale systems, including software management    ",
+    description: "Java is a cornerstone of our backend development, allowing us to create robust, scalable, and secure applications for enterprise-level solutions. Its versatility and reliability make it ideal for large-scale systems.",
   },
   {
     title: "PHP",
@@ -52,52 +52,80 @@ const technologies = [
 
 export default function TechSection() {
   const controls = useAnimation();
+  const [isDragging, setIsDragging] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const speed = 25; // seconds to scroll one full width
+
+  const loopedTech = [...technologies, ...technologies]; // loop for infinite scroll
 
   useEffect(() => {
-    const runAnimation = async () => {
-      while (true) {
-        await controls.start({
-          x: "-100%",
-          transition: {
-            duration: 20,
-            ease: "linear",
-          },
-        });
+    let isMounted = true;
 
-        await controls.set({ x: "0%" });
-      }
+    const animate = async () => {
+      if (isDragging || isHovered || !isMounted) return;
+
+      await controls.start({
+        x: "-50%",
+        transition: {
+          duration: speed,
+          ease: "linear",
+        },
+      });
+
+      if (!isMounted) return;
+
+      controls.set({ x: 0 });
+      animate(); // loop
     };
 
-    runAnimation();
-  }, [controls]);
+    animate();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [controls, isDragging, isHovered, speed]);
 
   return (
     <section className="w-full bg-[#006B8F1A] py-16 overflow-hidden">
-      <div className="max-w-6xl mx-auto text-center mb-10">
+      <div className="max-w-6xl mx-auto text-center mb-10 px-4">
         <h2 className="text-4xl font-bold">
           <span className="text-red-600">Our</span> Technology
         </h2>
         <div className="w-16 h-1 bg-red-600 mt-3 mx-auto rounded" />
       </div>
 
-      <div className="relative overflow-hidden">
-        <motion.div className="flex gap-3 w-max" animate={controls}>
-          {[...technologies, ...technologies].map((tech, index) => (
+      <div
+        className="relative overflow-hidden"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <motion.div
+          className="flex gap-3 w-max cursor-grab active:cursor-grabbing"
+          animate={controls}
+          drag="x"
+          dragConstraints={{ left: -Infinity, right: 0 }}
+          onDragStart={() => {
+            setIsDragging(true);
+            controls.stop();
+          }}
+          onDragEnd={() => {
+            setIsDragging(false);
+          }}
+        >
+          {loopedTech.map((tech, index) => (
             <div
-              key={index}
-              className="w-[20rem] flex-shrink-0 h-72 bg-[#343434] text-white p-6 rounded-xl flex flex-col items-center justify-between shadow-lg"
+              key={`${tech.title}-${index}`}
+              className="w-[20rem] flex-shrink-0 h-72 bg-[#343434] text-white p-6 rounded-xl flex flex-col items-center justify-between shadow-lg hover:scale-[1.02] transition-transform"
             >
               <Image
                 src={tech.icon}
                 alt={tech.title}
-                width={20}
-                height={20}
-                className="w-12 h-12 mb-4"
+                width={48}
+                height={48}
+                className="mb-4"
               />
               <h3 className="text-lg font-semibold">{tech.title}</h3>
-              <p className="text-sm  text-center ">
-                {tech.description}
-              </p>
+              <p className="text-sm text-center text-gray-300">{tech.description}</p>
             </div>
           ))}
         </motion.div>

@@ -1,10 +1,13 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-import { services } from "@/data/services";
 import Image from 'next/image';
-import mobDev from '@/public/assets/icons/mob-dev.svg'
-import software from '@/public/assets/icons/software.svg'
-import marketing from '@/public/assets/icons/marketing.svg'
+import { useTranslations } from 'next-intl';
+import { services } from "@/data/services";
+import mobDev from '@/public/assets/icons/mob-dev.svg';
+import software from '@/public/assets/icons/software.svg';
+import marketing from '@/public/assets/icons/marketing.svg';
 
 const serviceIcons = {
   "software-development": (
@@ -30,9 +33,10 @@ const serviceIcons = {
 };
 
 const ServicesSection = () => {
+  const t = useTranslations();
+
   return (
     <section className="py-12 relative bg-[#F5F5F5]">
-      {/* Decorative circles */}
       <div className="absolute right-1/4 top-0">
         <div className="h-16 w-16 rounded-full border-2 border-teal-100"></div>
       </div>
@@ -42,38 +46,32 @@ const ServicesSection = () => {
 
       <div className="w-[90%] mx-auto px-4">
         <div className="mb-10 text-center relative">
-          <h2 className="text-4xl font-bold text-gray-900">Services</h2>
+          <h2 className="text-4xl font-bold text-gray-900">{t('services.heading')}</h2>
         </div>
 
-        {/* Services grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service) => (
-            <Link key={service.id} href={`/service-details/${service.id}`}>
+            <Link key={service.id} href={`/services`}>
               <div className="cursor-pointer bg-white border border-[#F0D5D4] rounded-lg shadow-sm overflow-hidden flex flex-col h-full hover:bg-[#222641] hover:text-white transition-all">
                 <div className="p-6 flex-grow">
                   <div className="mb-4">
-                    {serviceIcons[service.id] || <div className="h-16" />} {/* fallback */}
+                    {serviceIcons[service.id] || <div className="h-16" />}
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{service.title}</h3>
+                  <h3 className="text-lg font-bold mb-2">
+                    {t(`services.${service.id}.title`)}
+                  </h3>
                   <p className="text-gray-600 text-sm leading-7 mb-7">
-                    {service.subtitle || service.description}
+                    {t(`services.${service.id}.subtitle`)}
                   </p>
                 </div>
                 <div className="p-6 pt-0">
                   <button className="w-full py-3 bg-brand-900 hover:bg-red-600 text-white rounded font-medium transition-colors duration-200">
-                    Learn More
+                    {t('services.learnMore')}
                   </button>
                 </div>
               </div>
             </Link>
           ))}
-        </div>
-
-        {/* Get More Services button */}
-        <div className="mt-10 md:text-left text-center">
-          <button className="px-6 py-3 btn-gray">
-            Get More Services
-          </button>
         </div>
       </div>
     </section>

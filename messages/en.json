@@ -1,0 +1,184 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contactUs": "Contact Us"
+  },
+  "language": {
+    "en": "English",
+    "ar": "Arabic",
+    "switchLanguage": "Switch Language"
+  },
+  "footer": {
+    "description": "Welcome To Viganium, A Leading Software Development Company At The Forefront Of The Digital Revolution.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "address": "8 T N Sama Tower, The Ring Road, Cairo, Egypt",
+    "phone": "+20 111 5893 336",
+    "email": "info@viganium.com",
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact Us",
+      "privacyPolicy": "Privacy Policy",
+      "terms": "Terms and Conditions",
+      "faq": "FAQ"
+    }
+  },
+  "slider": {
+    "slides": [
+      {
+        "title": "Software Development",
+        "description": "We Specialize In Custom Software Development, Delivering Tailored Solutions That Address The Unique Needs Of Businesses Across Various Industries."
+      },
+      {
+        "title": "Web Applications",
+        "description": "We create scalable and robust web applications that drive efficiency and business growth."
+      },
+      {
+        "title": "Mobile Solutions",
+        "description": "Empower your business with cross-platform mobile apps built for performance and usability."
+      }
+    ],
+    "readMore": "Read More"
+  },
+  "about": {
+    "heading": "About Us",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Leading Software Development Company At The Forefront Of The Digital Revolution. With A Passion For Innovation And A Commitment To Excellence, We Specialize In Web And Mobile Developments, AI, Blockchain, Machine Learning, And Mobile App Management Solutions.",
+      "values": {
+        "innovation": "Innovation",
+        "excellence": "Excellence",
+        "adaptability": "Adaptability",
+        "collaboration": "Collaboration"
+      },
+      "cta": "Get More Information"
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "Our Vision Is To Lead The Charge In Digital Transformation By Developing Pioneering Solutions That Shape The Future. We Envision A World Where Our Expertise In Web And Mobile Developments, AI, Blockchain, Machine Learning, And Mobile App Management Empowers Businesses Across Industries To Embrace Innovation, Optimize Operations, And Create Lasting Value.",
+      "points": {
+        "service": "Service",
+        "requirements": "Requirements",
+        "solutions": "Solutions"
+      }
+    }
+  },
+  "services": {
+    "heading": "Services",
+    "learnMore": "Learn More",
+    "software-development": {
+      "title": "Software Development",
+      "subtitle": "We specialize in custom software development, delivering tailored solutions that address the unique needs of businesses across various industries."
+    },
+    "web-mobile-app": {
+      "title": "Web & Mobile App Development",
+      "subtitle": "Viganium creates powerful mobile applications that offer seamless user experiences."
+    },
+    "ai-automation": {
+      "title": "AI Automation",
+      "subtitle": "Everything you need to start your business with intelligent automation solutions."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "subtitle": "Strategically allocating media budgets for optimal results and managing your brand's message across all platforms."
+    }
+  },
+  "servicesSection": {
+    "heading": "Our Services",
+    "services": [
+      {
+        "title": "Software Development",
+        "description": "We specialize in custom software development, delivering tailored solutions that address the unique needs of businesses across various industries."
+      },
+      {
+        "title": "Mobile App Development",
+        "description": "Vignilum creates powerful mobile applications that offer seamless user experiences."
+      },
+      {
+        "title": "Website Development",
+        "description": "Our websites are built to engage users, enhance brand presence, and drive business growth."
+      },
+      {
+        "title": "AI Agent",
+        "description": "With the Vignilum AI Agent, businesses can enhance customer service, automate repetitive tasks, and deliver consistent, round-the-clock engagement."
+      },
+      {
+        "title": "Marketing",
+        "description": "Strategically allocating media budgets for optimal results and managing your brand's message across all platforms."
+      },
+      {
+        "title": "Software Testing",
+        "description": "Our testing process includes functional, performance, and security testing to deliver flawless, reliable products."
+      },
+      {
+        "title": "AI Automation",
+        "description": "Vignilum AI Automation service adapts to your unique needs."
+      },
+      {
+        "title": "Software Handover",
+        "description": "We manage the entire handover process, ensuring all documentation, data, and systems are transferred securely."
+      },
+      {
+        "title": "AI Video Production",
+        "description": "With AI Video Generation, Vignilum transforms your ideas and data into captivating videos, complete with realistic visuals, voiceovers, and branding."
+      },
+      {
+        "title": "Blockchain Storage",
+        "description": "With Vignrium Blockchain Storage, businesses can benefit from enhanced data security, immutability, and reduced reliance on centralized storage solutions."
+      },
+      {
+        "title": "Cybersecurity Consultation",
+        "description": "Vignrium Cybersecurity Consultation Service is dedicated to helping businesses protect their digital assets and secure their operational environments."
+      },
+      {
+        "title": "IT Services",
+        "description": "Vignrium ensures your IT environment is robust, secure, and aligned with your business objectives."
+      },
+      {
+        "title": "CGI (Computer-Generated Imagery)",
+        "description": "With Vignrium CGI Service, your ideas come to life in vivid detail."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Vignrium excels in crafting intuitive, user-centered interfaces and experiences."
+      },
+      {
+        "title": "Graphic Design (CI and Outdoor)",
+        "description": "We provide creative design solutions for Corporate Identity (CI) and outdoor branding."
+      },
+      {
+        "title": "Project Management",
+        "description": "Vignilum's Project Management Service is designed to empower businesses to achieve their goals efficiently and effectively."
+      },
+      {
+        "title": "SaaS Platforms",
+        "description": "These platforms are designed for ease of use, high availability, and customization to meet specific business requirements."
+      },
+      {
+        "title": "Software and Technology Consultations",
+        "description": "Vignrium offers expert consultations to help businesses navigate the complex technology landscape."
+      }
+    ]
+  },
+  "aboutHeader": {
+    "heading": "Great Products Are Built By",
+    "highlight": "Great Teams",
+    "description": "Over the past decade, we've redefined the union of digital design and personalised experiences. Our team is dedicated to helping innovators & organisations of all sizes convert their ideas to reality.",
+    "imageAlt": "Team working together"
+  },
+  "aboutVision": {
+    "missionTitle": "Our Mission",
+    "missionDescription": "At Viganium, our mission is to empower our clients with cutting-edge technology solutions that drive growth, efficiency, and sustainability. We aim to be a trusted partner, leveraging our expertise to create transformative experiences that propel businesses to new heights. Through our dedication to innovation, collaboration, and customer satisfaction, we strive to build lasting relationships that make a positive impact on our clients' success.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "Our vision is to lead the charge in digital transformation by developing pioneering solutions that shape the future. We envision a world where our expertise in web and mobile developments, AI, blockchain, machine learning, and mobile app management empowers businesses across industries to embrace innovation, optimize operations, and create lasting value.",
+    "historyTitle": "Our History",
+    "historyDescription": "Viganium was founded in 2014, born out of a passion for innovation and a commitment to solving complex business challenges through technology. Established by a team of seasoned software developers and entrepreneurs, the company was created with a vision to provide cutting-edge software solutions tailored to meet the evolving needs of modern businesses. The idea for Vigtas emerged when the founders noticed a growing gap in the market for reliable, scalable, and customizable software solutions. This realization led them to form a company that would not only meet but exceed the expectations of clients across various industries. Since its inception, Vigtas has focused on delivering high-quality software that empowers businesses to streamline operations, enhance productivity, and drive growth. With a commitment to excellence and innovation, Vigtas has grown steadily, developing a reputation for delivering value-driven solutions and exceptional customer service. Today, Vigtas stands as a trusted technology partner for companies looking to stay ahead in an ever-evolving digital landscape."
+  }
+}

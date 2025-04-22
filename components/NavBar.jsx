@@ -2,17 +2,27 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations, useLocale } from 'next-intl';
+import LanguageSwitcher from "./LanguageSwitcher";
 
-import logofull from "@/public/assets/images/logo-full.png";
 import logo from "@/public/assets/images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations('navbar');
+  const locale = useLocale();
 
   // Function to close mobile menu
   const closeMobileMenu = () => {
     setIsOpen(false);
   };
+
+  // Navigation links
+  const navLinks = [
+    { name: t('home'), path: "/" },
+    { name: t('services'), path: "/services" },
+    { name: t('about'), path: "/about" },
+  ];
 
   return (
     <nav className="bg-[#1E1E1E] text-white px-5 md:px-7 py-5 flex items-center justify-between relative">
@@ -26,30 +36,36 @@ const Navbar = () => {
 
       {/* Menu links - Centered */}
       <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-10 text-md font-semibold">
-        {["Home", "Services", "About"].map((link, index) => (
+        {navLinks.map((link, index) => (
           <Link
             key={index}
-            href={`${link === 'Home' ? '/' : `/${link.toLowerCase()}`}`}
+            href={link.path}
             className="hover:text-brand-600 transition-colors relative group inline-flex flex-col items-center"
           >
-            {link}
+            {link.name}
             <div className="h-[2px] w-0 bg-brand-600 rounded-lg mt-1 transition-all duration-300 group-hover:w-full"></div>
           </Link>
         ))}
       </div>
 
-      {/* Contact Button */}
-      <div className="hidden md:block z-20">
+      {/* Contact Button and Language Switch */}
+      <div className="hidden md:flex items-center gap-4 z-20">
+        <LanguageSwitcher />
+        
         <Link
           href="/contact-us"
           className="bg-[#BB413D] hover:bg-brand-900 text-white text-sm font-medium px-5 py-2 rounded-md transition-colors"
         >
-          Contact Us
+          {t('contactUs')}
         </Link>
       </div>
 
-      {/* Mobile Hamburger */}
-      <div className="md:hidden z-20">
+      {/* Mobile Hamburger and Language Button */}
+      <div className="md:hidden flex items-center gap-2 z-20">
+        {/* Language toggle for mobile */}
+        <LanguageSwitcher />
+        
+        {/* Hamburger menu */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-white hover:text-brand-800 focus:outline-none transition-colors"
@@ -74,14 +90,14 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-[#1c1c1c] flex flex-col items-start p-5 gap-4 md:hidden z-10">
-          {["Home", "Services", "About"].map((link, index) => (
+          {navLinks.map((link, index) => (
             <Link
               key={index}
-              href={`${link === 'Home' ? '/' : `/${link.toLowerCase()}`}`}
+              href={link.path}
               className="hover:text-brand-600 font-semibold transition-colors w-full"
               onClick={closeMobileMenu}
             >
-              {link}
+              {link.name}
             </Link>
           ))}
           <Link
@@ -89,7 +105,7 @@ const Navbar = () => {
             className="bg-[#BB413D] hover:bg-brand-900 font-semibold transition-colors text-white px-4 py-2 rounded w-full text-center"
             onClick={closeMobileMenu}
           >
-            Contact Us
+            {t('contactUs')}
           </Link>
         </div>
       )}

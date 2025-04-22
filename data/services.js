@@ -3,8 +3,8 @@ import software from '@/public/assets/images/services/software-dev.svg'
 export const services = [
   {
     id: "software-development",
-    title: "Software Development",
-    subtitle:
+    titleKey: "Software Development",
+    subtitleKey:
       "We specialize in custom software development, delivering tailored solutions that address the unique needs of businesses across various industries.",
     image: software,
     tags: [
@@ -40,8 +40,8 @@ export const services = [
   },
   {
     id: "web-mobile-app",
-    title: "Web & Mobile App Development",
-    subtitle:
+    titleKey: "Web & Mobile App Development",
+    subtitleKey:
       "Viganium creates powerful mobile applications that offer seamless user experiences.",
     image: "/images/services/software.png",
     tags: [
@@ -77,8 +77,8 @@ export const services = [
   },
   {
     id: "ai-automation",
-    title: "AI Automation",
-    subtitle:
+    titleKey: "AI Automation",
+    subtitleKey:
       "Thing you need start your business with everything you need start your business with every.",
     image: "/images/services/software.png",
     tags: [
@@ -114,8 +114,8 @@ export const services = [
   },
   {
     id: "marketing",
-    title: "Marketing",
-    subtitle:
+    titleKey: "Marketing",
+    subtitleKey:
       "Strategically allocating media budgets for optimal results. And managing your brand's message is effectively communicated across all platforms to achieve.",
     image: "/images/services/software.png",
     tags: [
