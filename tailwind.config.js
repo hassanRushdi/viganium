@@ -20,7 +20,10 @@ module.exports = {
         "brand-50" : '#F7EAE9',
         black: '#1E1E1E',
         // gray: '#A5A5A5'
-      }
+      },
+      rotate: {
+        'y-180': '180deg',
+      },
     },
   },
   plugins: [],
