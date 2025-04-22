@@ -1,35 +1,30 @@
 import React from 'react';
 import Link from 'next/link';
 import { services } from "@/data/services";
+import Image from 'next/image';
+import mobDev from '@/public/assets/icons/mob-dev.svg'
+import software from '@/public/assets/icons/software.svg'
+import marketing from '@/public/assets/icons/marketing.svg'
 
 const serviceIcons = {
   "software-development": (
     <div className="bg-[#F5F5F5] w-16 h-16 rounded-md flex items-center justify-center mb-4">
-      <svg className="w-10 h-10 text-red-600" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M4 5h16v2H4zm0 4h16v2H4zm0 4h16v2H4zm0 4h16v2H4z" />
-        <circle cx="19" cy="4" r="2" />
-      </svg>
+      <Image src={software} alt="Software Development" className="w-10 h-10" />
     </div>
   ),
   "web-mobile-app": (
     <div className="bg-red-100 w-16 h-16 rounded-md flex items-center justify-center mb-4">
-      <svg className="w-10 h-10 text-red-600" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z" />
-      </svg>
+      <Image src={mobDev} alt="Web & Mobile App" className="w-10 h-10" />
     </div>
   ),
   "ai-automation": (
     <div className="bg-red-100 w-16 h-16 rounded-md flex items-center justify-center mb-4">
-      <svg className="w-10 h-10 text-red-600" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M21 11.5v-1c0-.8-.7-1.5-1.5-1.5H16v-2h1.5c.8 0 1.5-.7 1.5-1.5v-1c0-.8-.7-1.5-1.5-1.5h-5c-.8 0-1.5.7-1.5 1.5v1c0 .8.7 1.5 1.5 1.5H14v2H9.5C8.7 9 8 9.7 8 10.5v1c0 .8.7 1.5 1.5 1.5H12v2h-1.5c-.8 0-1.5.7-1.5 1.5v1c0 .8.7 1.5 1.5 1.5h5c.8 0 1.5-.7 1.5-1.5v-1c0-.8-.7-1.5-1.5-1.5H14v-2h4.5c.8 0 1.5-.7 1.5-1.5z" />
-      </svg>
+      <Image src={mobDev} alt="AI & Automation" className="w-10 h-10" />
     </div>
   ),
   "marketing": (
     <div className="bg-red-100 w-16 h-16 rounded-md flex items-center justify-center mb-4">
-      <svg className="w-10 h-10 text-red-600" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18 13h-5v5h5v-5zM6 13h5v5H6v-5zm0-7h5v5H6V6zm12 0h-5v5h5V6z" />
-      </svg>
+      <Image src={marketing} alt="Marketing" className="w-10 h-10" />
     </div>
   ),
 };

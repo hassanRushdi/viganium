@@ -123,7 +123,7 @@ const ServicesSection = () => {
           <div className="w-16 h-[3px] bg-brand-900 mt-3 mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, index) => (
             <div
               key={index}
@@ -132,12 +132,12 @@ const ServicesSection = () => {
               <Image
                 src={service.icon}
                 alt={service.title}
-                className="w-30 h-30 object-contain mx-auto mb-6"
+                className="w-30 h-[183px] object-contain mx-auto mb-6"
               />
-              <h3 className="text-[18px] font-semibold text-center mb-3 leading-snug">
+              <h3 className="text-[20px] font-[700] mb-3 ">
                 {service.title}
               </h3>
-              <p className="text-[14px] text-gray-600 text-center leading-relaxed mb-5">
+              <p className="text-[16pxpx] text-gray-600 mb-5 leading-[32px]">
                 {service.description}
               </p>
               {/* <div className="mt-auto text-center">
