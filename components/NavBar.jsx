@@ -2,14 +2,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations, useLocale } from "next-intl";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 import logo from "@/public/assets/images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const t = useTranslations('navbar');
+  const t = useTranslations("navbar");
   const locale = useLocale();
 
   // Function to close mobile menu
@@ -19,15 +19,15 @@ const Navbar = () => {
 
   // Navigation links
   const navLinks = [
-    { name: t('home'), path: "/" },
-    { name: t('services'), path: "/services" },
-    { name: t('about'), path: "/about" },
+    { name: t("home"), path: "/" },
+    { name: t("services"), path: "/services" },
+    { name: t("about"), path: "/about" },
   ];
 
   return (
     <nav className="bg-[#1E1E1E] text-white px-5 md:px-7 py-5 flex items-center justify-between relative">
       {/* Logo */}
-      <div className="flex items-center z-20">
+      <div className="flex items-center z-20" dir="ltr">
         <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
           <Image src={logo} alt="Viganium Logo" width={44} height={44} />
           <p className="font-semibold text-lg px-[1.3px]">Iganium</p>
@@ -51,12 +51,12 @@ const Navbar = () => {
       {/* Contact Button and Language Switch */}
       <div className="hidden md:flex items-center gap-4 z-20">
         <LanguageSwitcher />
-        
+
         <Link
           href="/contact-us"
           className="bg-[#BB413D] hover:bg-brand-900 text-white text-sm font-medium px-5 py-2 rounded-md transition-colors"
         >
-          {t('contactUs')}
+          {t("contactUs")}
         </Link>
       </div>
 
@@ -64,7 +64,7 @@ const Navbar = () => {
       <div className="md:hidden flex items-center gap-2 z-20">
         {/* Language toggle for mobile */}
         <LanguageSwitcher />
-        
+
         {/* Hamburger menu */}
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -105,7 +105,7 @@ const Navbar = () => {
             className="bg-[#BB413D] hover:bg-brand-900 font-semibold transition-colors text-white px-4 py-2 rounded w-full text-center"
             onClick={closeMobileMenu}
           >
-            {t('contactUs')}
+            {t("contactUs")}
           </Link>
         </div>
       )}
