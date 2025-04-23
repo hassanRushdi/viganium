@@ -71,8 +71,9 @@ const Footer = () => {
             <li className="flex items-start gap-3">
               <Image src={location} alt="location" width={16} height={16} className="mt-1 min-w-[16px]" />
               <Link
-                href="https://maps.google.com/?q=8+T+N+Sama+Tower,+The+Ring+Road,+Cairo,+Egypt"
+                href="https://maps.app.goo.gl/YLVfwLBiDq95hbpd7"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-red-600 transition-colors"
               >
                 {t("address")}
