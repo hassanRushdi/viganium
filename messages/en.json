@@ -318,5 +318,36 @@
         "description": "Our customizable CRM systems help businesses manage sales pipelines, support, and client communications effectively."
       }
     }
+  },
+  "contact": {
+    "title": "Thank You For Your Interest In {brand}",
+    "subtitle": "👋 How Can We Help You?",
+    "form": {
+      "name": "Name",
+      "phone": "Your phone number",
+      "email": "example@yourcompany.com",
+      "company": "Your company",
+      "message": "Write message here",
+      "submit": "Send Message"
+    },
+    "errors": {
+      "name": "Name is required",
+      "phone": "Phone number is required",
+      "email": "Invalid email",
+      "message": "Message is required"
+    },
+    "success": {
+      "title": "🎉 Message Sent!",
+      "message": "Thank you for contacting us. We'll get back to you as soon as possible.",
+      "button": "Send Another Message"
+    },
+    "contactInfo": {
+      "call": "Call Us",
+      "email": "E-Mail",
+      "address": "Address",
+      "phoneValue": "+20 111 5693 336",
+      "emailValue": "info@viganium.com",
+      "addressValue": "B T N Sama Tower, The Ring Road, Cairo, Egypt"
+    }
   }
 }
