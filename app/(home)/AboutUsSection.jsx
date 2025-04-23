@@ -13,6 +13,7 @@ import solutionsIcon from "@/public/assets/icons/home/vision/solutions.svg";
 import normalShape from "@/public/assets/shapes/normalShape.svg";
 import hoverShape from "@/public/assets/shapes/hoverShape.svg";
 import polygon from "@/public/assets/shapes/polygon.svg";
+import Link from "next/link";
 
 const AboutCard = ({ icon, title, className = "" }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -116,7 +117,9 @@ const AboutUsSection = () => {
           </div>
 
           <button className="w-full sm:w-auto px-8 font-semibold py-2 rounded-lg bg-[#4B4B4B] text-white hover:bg-black transition-colors duration-300">
+            <Link href='/about'>
             {t("mission.cta")}
+            </Link>
           </button>
         </div>
 

@@ -8,6 +8,7 @@ import slider1 from "@/public/assets/images/home/section1/slider1.jpg";
 import slider2 from "@/public/assets/images/home/section1/slider2.jpg";
 import slider3 from "@/public/assets/images/home/section1/slider3.jpg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const images = [slider1, slider2, slider3];
 
@@ -45,7 +46,9 @@ export default function SliderSection() {
             <div className="h-1 w-16 bg-red-600 mb-5" />
             <p className="text-gray-700 mb-6">{slides[current].description}</p>
             <button className="bg-gray-700 text-white px-6 py-3 rounded hover:bg-gray-800 transition">
+            <Link href="/services">
               {t("readMore")}
+            </Link>
             </button>
           </div>
         </div>
@@ -77,7 +80,9 @@ export default function SliderSection() {
                 </div>
                 <div>
                   <button className="bg-black py-2 text-white px-6 rounded w-fit hover:bg-gray-800 transition">
+                  <Link href="/services">
                     {t("readMore")}
+                  </Link>
                   </button>
                 </div>
               </div>
