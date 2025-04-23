@@ -213,5 +213,39 @@
         "description": "We use PHP for dynamic web development, building flexible and efficient websites and platforms. Whether developing E-Commerce sites or custom web solutions, PHP provides the speed and scalability needed for modern web applications."
       }
     }
+  },
+  "values": {
+    "heading": {
+      "highlight": "Our",
+      "rest": "Core Values"
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "We believe in pushing the boundaries of technology. We strive to create forward-thinking solutions that keep our clients ahead in a rapidly changing digital world."
+    },
+    "excellence": {
+      "title": "Excellence",
+      "description": "We are committed to delivering the highest quality in every project we undertake. From concept to execution, excellence is at the core of everything we do."
+    },
+    "customer": {
+      "title": "Customer-Centricity",
+      "description": "Our clients are our priority. We focus on understanding their needs and providing solutions that drive their success, building lasting partnerships through trust and collaboration."
+    },
+    "growth": {
+      "title": "Commitment To Growth",
+      "description": "We are dedicated to the continuous improvement of our team, solutions, and services, empowering both our clients and ourselves to grow and succeed."
+    },
+    "integrity": {
+      "title": "Integrity",
+      "description": "We operate with transparency and honesty in all our dealings, ensuring that ethical principles guide our decision-making and business practices."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "description": "We foster a culture of teamwork, both within our company and with our clients, to achieve the best results. Collaboration enables us to leverage collective expertise and creativity."
+    },
+    "adaptability": {
+      "title": "Adaptability",
+      "description": "In an ever-evolving industry, flexibility is key. We embrace change and continuously adapt our strategies to stay relevant and effective in meeting tomorrow’s challenges."
+    }
   }
 }
