@@ -22,9 +22,9 @@ const Footer = () => {
     { key: "services", href: "/services" },
     { key: "about", href: "/about" },
     { key: "contact", href: "/contact-us" },
-    { key: "privacyPolicy", href: "/privacy-policy" },
-    { key: "terms", href: "/terms-and-conditions" },
-    { key: "faq", href: "/faq" }
+    // { key: "privacyPolicy", href: "/privacy-policy" },
+    // { key: "terms", href: "/terms-and-conditions" },
+    // { key: "faq", href: "/faq" }
   ];
 
   return (
