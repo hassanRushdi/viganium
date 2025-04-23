@@ -1,37 +1,16 @@
 "use client";
 
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
-
-const contactSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  phone: z.string().min(1, "Phone number is required"),
-  email: z.string().email("Invalid email"),
-  company: z.string().optional(),
-  message: z.string().min(1, "Message is required"),
-});
+import { useContactForm } from "@/hooks/useContactForm"; // Adjust path as needed
 
 export default function ContactSection() {
   const t = useTranslations("contact");
-  const [submitted, setSubmitted] = useState(false);
-
   const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm({
-    resolver: zodResolver(contactSchema),
-  });
-
-  const onSubmit = (data) => {
-    console.log(data);
-    setSubmitted(true);
-    reset();
-  };
+    formData,
+    formStatus,
+    handleInputChange,
+    handleSubmit
+  } = useContactForm();
 
   return (
     <section className="w-full bg-gradient-to-b from-[#f7f8fa] to-[#e8eaed] py-12 px-4 md:px-10">
@@ -46,7 +25,7 @@ export default function ContactSection() {
             className="relative w-full max-w-4xl transition-transform duration-700"
             style={{
               transformStyle: "preserve-3d",
-              transform: submitted ? "rotateY(180deg)" : "rotateY(0deg)",
+              transform: formStatus.isSuccess ? "rotateY(180deg)" : "rotateY(0deg)",
             }}
           >
             {/* FRONT: Contact Form */}
@@ -58,58 +37,72 @@ export default function ContactSection() {
                 {t("subtitle")}
               </h3>
               <form
-                onSubmit={handleSubmit(onSubmit)}
+                onSubmit={handleSubmit}
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
               >
                 <div>
                   <input
                     type="text"
-                    {...register("name")}
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     placeholder={t("form.name")}
                     className="border border-gray-300 rounded-md p-3 w-full"
+                    required
                   />
-                  {errors.name && (
+                  {formStatus.isError && !formData.name && (
                     <p className="text-red-500 text-sm mt-1">{t("errors.name")}</p>
                   )}
                 </div>
                 <div>
                   <input
                     type="text"
-                    {...register("phone")}
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     placeholder={t("form.phone")}
                     className="border border-gray-300 rounded-md p-3 w-full"
+                    required
                   />
-                  {errors.phone && (
+                  {formStatus.isError && !formData.phone && (
                     <p className="text-red-500 text-sm mt-1">{t("errors.phone")}</p>
                   )}
                 </div>
                 <div>
                   <input
                     type="email"
-                    {...register("email")}
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder={t("form.email")}
                     className="border border-gray-300 rounded-md p-3 w-full"
+                    required
                   />
-                  {errors.email && (
+                  {formStatus.isError && !formData.email && (
                     <p className="text-red-500 text-sm mt-1">{t("errors.email")}</p>
                   )}
                 </div>
                 <div>
                   <input
                     type="text"
-                    {...register("company")}
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
                     placeholder={t("form.company")}
                     className="border border-gray-300 rounded-md p-3 w-full"
                   />
                 </div>
                 <div className="md:col-span-2">
                   <textarea
-                    {...register("message")}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     placeholder={t("form.message")}
                     rows={4}
                     className="border border-gray-300 rounded-md p-3 w-full resize-none"
+                    required
                   />
-                  {errors.message && (
+                  {formStatus.isError && !formData.message && (
                     <p className="text-red-500 text-sm mt-1">{t("errors.message")}</p>
                   )}
                 </div>
@@ -117,10 +110,26 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     className="bg-gray-700 text-white py-3 px-6 w-full rounded-md hover:bg-gray-800 transition"
+                    disabled={formStatus.isSubmitting}
                   >
-                    {t("form.submit")}
+                    {formStatus.isSubmitting ? (
+                      <span className="flex items-center justify-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        {t("form.submitting")}
+                      </span>
+                    ) : (
+                      t("form.submit")
+                    )}
                   </button>
                 </div>
+                {formStatus.isError && (
+                  <div className="md:col-span-2 mt-2 text-center">
+                    <p className="text-red-500">{formStatus.message}</p>
+                  </div>
+                )}
               </form>
             </div>
 
@@ -137,7 +146,12 @@ export default function ContactSection() {
               </h3>
               <p className="text-gray-700 mb-6">{t("success.message")}</p>
               <button
-                onClick={() => setSubmitted(false)}
+                onClick={() => {
+                  // Reset form status
+                  formStatus.isSuccess = false;
+                  // Force re-render
+                  window.location.reload();
+                }}
                 className="px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
               >
                 {t("success.button")}
