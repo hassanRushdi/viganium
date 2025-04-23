@@ -279,5 +279,44 @@
         "alt": "Zoho logo"
       }
     }
+  },
+  "IndustrySection": {
+    "dir": "ltr",
+    "heading": {
+      "prefix": "Our",
+      "suffix": " Industry Experience"
+    },
+    "industries": {
+      "carRental": {
+        "title": "Car Rental Services",
+        "highlight": "Car",
+        "description": "Vigtas offers comprehensive software solutions for car rental companies, enabling them to manage fleets, bookings, accounts, and billing for a smoother experience."
+      },
+      "cleaning": {
+        "title": "Cleaning Companies",
+        "highlight": "Cleaning",
+        "description": "Our software streamlines task scheduling, CRM, invoicing, and employee management for cleaning companies to improve service efficiency."
+      },
+      "factories": {
+        "title": "Factories Software Management",
+        "highlight": "Factories",
+        "description": "We help factories manage production, inventory, and workflows with our customized solutions for better control and efficiency."
+      },
+      "realstate": {
+        "title": "Real Estate",
+        "highlight": "",
+        "description": "We provide CRM and rental systems to help real estate agents and brokers manage listings, leads, and client interactions efficiently."
+      },
+      "ecommerce": {
+        "title": "E-Commerce",
+        "highlight": "",
+        "description": "We build scalable platforms for online stores, enabling smooth workflows, customer transactions, and business growth."
+      },
+      "crm": {
+        "title": "CRM Solutions",
+        "highlight": "CRM",
+        "description": "Our customizable CRM systems help businesses manage sales pipelines, support, and client communications effectively."
+      }
+    }
   }
 }
