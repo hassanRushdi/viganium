@@ -247,5 +247,37 @@
       "title": "Adaptability",
       "description": "In an ever-evolving industry, flexibility is key. We embrace change and continuously adapt our strategies to stay relevant and effective in meeting tomorrow’s challenges."
     }
+  },
+  "Partnerships": {
+    "heading": {
+      "prefix": "Our",
+      "suffix": "Partnerships"
+    },
+    "partners": {
+      "aws": {
+        "name": "Amazon Web Services",
+        "alt": "AWS logo"
+      },
+      "meta": {
+        "name": "Meta",
+        "alt": "Meta logo"
+      },
+      "oracle": {
+        "name": "Oracle",
+        "alt": "Oracle logo"
+      },
+      "google": {
+        "name": "Google",
+        "alt": "Google logo"
+      },
+      "microsoft": {
+        "name": "Microsoft",
+        "alt": "Microsoft logo"
+      },
+      "zoho": {
+        "name": "Zoho",
+        "alt": "Zoho logo"
+      }
+    }
   }
 }
