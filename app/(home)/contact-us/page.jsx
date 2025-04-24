@@ -205,6 +205,7 @@ export default function ContactSection() {
             <a
               href={`tel:${t("contactInfo.phoneValue").replace(/\D/g, "")}`}
               className="pt-2 hover:text-brand-900 transition-colors"
+              style={{ unicodeBidi: "plaintext" }}
             >
               {t("contactInfo.phoneValue")}
             </a>

@@ -39,11 +39,14 @@ export default function TechSection() {
   useEffect(() => {
     if (carousel.current) {
       // Only measure the first set of items for transition calculation
-      const cardWidth = carousel.current.children[0].offsetWidth;
-      const cardMargin = parseInt(window.getComputedStyle(carousel.current.children[0]).marginRight);
+      const firstChild = carousel.current.children[0];
+      const cardWidth = firstChild.offsetWidth;
+      const cardMargin = parseInt(window.getComputedStyle(firstChild).marginRight);
       setWidth((cardWidth + cardMargin) * techKeys.length);
     }
   }, [techKeys.length]);
+
+  
   
   return (
     <section className="w-full bg-[#006B8F1A] py-16 overflow-hidden">
@@ -82,16 +85,16 @@ export default function TechSection() {
           {loopedKeys.map((key, index) => (
             <div
               key={`${key}-${index}`}
-              className="w-[20rem] flex-shrink-0 h-72 bg-[#343434] text-white p-6 rounded-xl flex flex-col items-center justify-between shadow-lg hover:scale-[1.02] transition-transform mx-1"
+              className="w-[20rem] flex-shrink-0 h-72 bg-[#343434] text-white p-6 rounded-xl flex flex-col items-center shadow-lg hover:scale-[1.02] transition-transform mx-1"
             >
               <Image
                 src={techIcons[key]}
                 alt={t(`items.${key}.title`)}
                 width={48}
                 height={48}
-                className="mb-4"
+                className="mb-4 mt-5"
               />
-              <h3 className="text-lg font-semibold">{t(`items.${key}.title`)}</h3>
+              <h3 className="text-lg font-semibold mb-4">{t(`items.${key}.title`)}</h3>
               <p className="text-sm text-center text-gray-300">
                 {t(`items.${key}.description`)}
               </p>
