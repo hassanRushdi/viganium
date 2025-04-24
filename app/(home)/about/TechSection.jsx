@@ -29,7 +29,7 @@ export default function TechSection() {
   const controls = useAnimation();
   const [isDragging, setIsDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const carousel = useRef<HTMLDivElement>(null);
+  const carousel = useRef(null);
   const speed = 30; // seconds to complete one cycle
   
   const techKeys = Object.keys(techIcons);
