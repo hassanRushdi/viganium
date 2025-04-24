@@ -1,12 +1,11 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useContactForm } from "@/hooks/useContactForm"; // Adjust path as needed
+import { useContactForm } from "@/hooks/useContactForm"; 
 
 export default function ContactSection() {
   const t = useTranslations("contact");
-  const { formData, formStatus, handleInputChange, handleSubmit } =
-    useContactForm();
+  const { formData, formStatus, handleInputChange, handleSubmit, resetForm } = useContactForm();
 
   return (
     <section className="w-full bg-gradient-to-b from-[#f7f8fa] to-[#e8eaed] py-12 px-4 md:px-10">
