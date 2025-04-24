@@ -67,7 +67,7 @@ export default function TechSection() {
     if (dir === 'rtl') {
       controls.set({ x: 0 });
       controls.start({
-        x: [0, techKeys.length * 320], // Adjust this value based on your card width
+        x: [0, techKeys.length * 320], 
         transition: {
           x: {
             duration: speed,

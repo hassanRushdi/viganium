@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="flex items-center z-20" dir="ltr">
         <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
           <Image src={logo} alt="Viganium Logo" width={44} height={44} />
-          <p className="font-semibold text-lg px-[1.3px]">Iganium</p>
+          <p className="font-semibold text-lg px-[1.3px]">iganium</p>
         </Link>
       </div>
 
