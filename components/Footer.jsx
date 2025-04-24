@@ -81,7 +81,7 @@ const Footer = () => {
             </li>
             <li className="flex items-start gap-3">
               <Image src={call} alt="phone" width={16} height={16} className="mt-1 min-w-[16px]" />
-              <a href="tel:+201115893336" className="hover:text-red-600 transition-colors">
+              <a href="tel:+201090105214" className="hover:text-red-600 transition-colors">
                 {t("phone")}
               </a>
             </li>

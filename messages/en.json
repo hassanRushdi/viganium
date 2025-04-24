@@ -18,7 +18,7 @@
     "quickLinks": "Quick Links",
     "contactUs": "Contact Us",
     "address": "8 T N Sama Tower, The Ring Road, Cairo, Egypt",
-    "phone": "+20 111 5893 336",
+    "phone": "+20 109 010 5214",
     "email": "info@viganium.com",
     "links": {
       "home": "Home",
@@ -325,7 +325,7 @@
     "form": {
       "name": "Name",
       "phone": "Your phone number",
-      "email": "example@yourcompany.com",
+      "email": "email@yourcompany.com",
       "company": "Your company",
       "message": "Write message here",
       "submit": "Send Message"
@@ -345,7 +345,7 @@
       "call": "Call Us",
       "email": "E-Mail",
       "address": "Address",
-      "phoneValue": "+20 111 5693 336",
+      "phoneValue": "+20 109 010 5214",
       "emailValue": "info@viganium.com",
       "addressValue": "B T N Sama Tower, The Ring Road, Cairo, Egypt"
     }

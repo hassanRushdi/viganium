@@ -60,7 +60,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl px-6 pt-6 pb-8 border-[10px] border-[#0000000D] shadow-[0_4px_16px_rgba(0,0,0,0.06)] h-[539px]"
+              className="bg-white rounded-2xl px-6 pt-6 pb-8 border-[10px] border-[#0000000D] shadow-[0_4px_16px_rgba(0,0,0,0.06)] flex flex-col"
             >
               <Image
                 src={serviceIcons[index]}

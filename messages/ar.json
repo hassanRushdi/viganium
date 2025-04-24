@@ -18,7 +18,7 @@
     "quickLinks": "روابط سريعة",
     "contactUs": "اتصل بنا",
     "address": "8 برج سما T N، الطريق الدائري، القاهرة، مصر",
-    "phone": "+20 111 5893 336",
+    "phone": "+20 109 010 5214",
     "email": "info@viganium.com",
     "links": {
       "home": "الرئيسية",
@@ -325,7 +325,7 @@
     "form": {
       "name": "الاسم",
       "phone": "رقم هاتفك",
-      "email": "example@yourcompany.com",
+      "email": "email@yourcompany.com",
       "company": "اسم شركتك",
       "message": "اكتب رسالتك هنا",
       "submit": "إرسال الرسالة"
@@ -345,7 +345,7 @@
       "call": "اتصل بنا",
       "email": "البريد الإلكتروني",
       "address": "العنوان",
-      "phoneValue": "+20 111 5693 336",
+      "phoneValue": "+20 109 010 5214",
       "emailValue": "info@viganium.com",
       "addressValue": "برج بي تي إن سما، الطريق الدائري، القاهرة، مصر"
     }
