@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
+// Import your icons
 import flutter from "@/public/assets/icons/about/tech/flutter.svg";
 import swift from "@/public/assets/icons/about/tech/swift.svg";
 import java from "@/public/assets/icons/about/tech/java.svg";
@@ -25,29 +26,79 @@ const techIcons = {
 
 export default function TechSection() {
   const t = useTranslations("techSection");
+  const controls = useAnimation();
   const [isDragging, setIsDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const [width, setWidth] = useState(0);
-  const carousel = useRef(null);
-  const speed = 60; // seconds to complete one cycle
+  const carousel = useRef<HTMLDivElement>(null);
+  const speed = 30; // seconds to complete one cycle
   
   const techKeys = Object.keys(techIcons);
   // Create a set of duplicated items for seamless looping
-  const loopedKeys = [...techKeys, ...techKeys, ...techKeys];
+  const loopedKeys = [...techKeys, ...techKeys];
   
   // Calculate container width for animation
   useEffect(() => {
     if (carousel.current) {
-      // Only measure the first set of items for transition calculation
-      const firstChild = carousel.current.children[0];
+      const firstChild = carousel.current.children[0] ;
+      if (!firstChild) return;
+      
       const cardWidth = firstChild.offsetWidth;
       const cardMargin = parseInt(window.getComputedStyle(firstChild).marginRight);
-      setWidth((cardWidth + cardMargin) * techKeys.length);
+      const totalWidth = (cardWidth + cardMargin) * techKeys.length;
+      
+      // Start the animation
+      controls.start({
+        x: [0, -totalWidth],
+        transition: {
+          x: {
+            duration: speed,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "loop",
+          }
+        }
+      });
     }
-  }, [techKeys.length]);
+  }, [controls, techKeys.length]);
 
-  
-  
+  // Handle RTL/LTR direction changes
+  useEffect(() => {
+    const dir = document.documentElement.dir || 'ltr';
+    if (dir === 'rtl') {
+      controls.set({ x: 0 });
+      controls.start({
+        x: [0, techKeys.length * 320], // Adjust this value based on your card width
+        transition: {
+          x: {
+            duration: speed,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "loop",
+          }
+        }
+      });
+    }
+  }, [controls, techKeys.length]);
+
+  // Pause animation on hover or drag
+  useEffect(() => {
+    if (isHovered || isDragging) {
+      controls.stop();
+    } else {
+      controls.start({
+        x: [null, document.documentElement.dir === 'rtl' ? techKeys.length * 320 : -techKeys.length * 320],
+        transition: {
+          x: {
+            duration: speed,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "loop",
+          }
+        }
+      });
+    }
+  }, [isHovered, isDragging, controls, techKeys.length]);
+
   return (
     <section className="w-full bg-[#006B8F1A] py-16 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center mb-10 px-4">
@@ -67,25 +118,19 @@ export default function TechSection() {
           ref={carousel}
           className="flex gap-3 w-max cursor-grab active:cursor-grabbing"
           drag="x"
-          dragConstraints={{ left: -width * 2, right: 0 }}
+          dragConstraints={{
+            left: document.documentElement.dir === 'rtl' ? 0 : -techKeys.length * 640,
+            right: document.documentElement.dir === 'rtl' ? techKeys.length * 640 : 0
+          }}
           onDragStart={() => setIsDragging(true)}
           onDragEnd={() => setIsDragging(false)}
-          animate={{
-            x: isDragging || isHovered ? null : -width,
-            transition: {
-              x: {
-                duration: speed,
-                ease: "linear",
-                repeat: Infinity,
-                repeatType: "loop",
-              }
-            }
-          }}
+          animate={controls}
         >
           {loopedKeys.map((key, index) => (
-            <div
+            <motion.div
               key={`${key}-${index}`}
-              className="w-[20rem] flex-shrink-0 h-72 bg-[#343434] text-white p-6 rounded-xl flex flex-col items-center shadow-lg hover:scale-[1.02] transition-transform mx-1"
+              className="w-[20rem] flex-shrink-0 h-[20rem] bg-[#343434] text-white p-6 rounded-xl flex flex-col items-center shadow-lg hover:scale-[1.02] transition-transform mx-1"
+              whileHover={{ scale: isDragging ? 1 : 1.02 }}
             >
               <Image
                 src={techIcons[key]}
@@ -98,7 +143,7 @@ export default function TechSection() {
               <p className="text-sm text-center text-gray-300">
                 {t(`items.${key}.description`)}
               </p>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>
