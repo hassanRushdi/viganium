@@ -17,6 +17,14 @@ import tiktok from "@/public/assets/icons/footer/tiktok.svg";
 const Footer = () => {
   const t = useTranslations("footer");
 
+  const socialLinks = [
+    { icon: facebook, link: 'https://www.facebook.com/viganium' },
+    { icon: instagram, link: 'https://www.instagram.com/viganiumco/' },
+    { icon: linkedin, link: 'https://www.linkedin.com/company/viganiuminc' },
+    // { icon: snapchat, link: '' }, // Add snapchat link if available
+    // { icon: tiktok, link: '' } // Add tiktok link if available
+  ];
+
   const links = [
     { key: "home", href: "/" },
     { key: "services", href: "/services" },
@@ -39,13 +47,16 @@ const Footer = () => {
             {t("description")}
           </p>
           <div className="flex gap-3 md:pt-10">
-            {[snapchat, instagram, tiktok, linkedin, facebook].map((icon, index) => (
-              <button
+            {socialLinks.map(({ icon, link }, index) => (
+              <Link
                 key={index}
-                className="bg-[#F7EAE9] w-10 h-10 rounded flex items-center justify-center min-w-[40px]"
+                href={link || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#F7EAE9] w-10 h-10 rounded flex items-center justify-center min-w-[40px] hover:opacity-80 transition-opacity"
               >
-                <Image src={icon} alt="social-icon" width={20} height={20} />
-              </button>
+                <Image src={icon} alt="social-icon" width={27} height={27} />
+              </Link>
             ))}
           </div>
         </div>
