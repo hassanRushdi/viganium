@@ -34,7 +34,7 @@
     "slides": [
       {
         "title": "Software Development",
-        "description": "We Specialize In Custom Software Development, Delivering Tailored Solutions That Address The Unique Needs Of Businesses Across Various Industries."
+        "description": "We specialize in custom software development, delivering tailored solutions that address the unique needs of businesses across various industries."
       },
       {
         "title": "Web Applications",
@@ -51,7 +51,7 @@
     "heading": "About Us",
     "mission": {
       "title": "Our Mission",
-      "description": "Leading Software Development Company At The Forefront Of The Digital Revolution. With A Passion For Innovation And A Commitment To Excellence, We Specialize In Web And Mobile Developments, AI, Blockchain, Machine Learning, And Mobile App Management Solutions.",
+      "description": "At Viganium, our mission is to empower our clients with cutting-edge technology solutions that drive growth, efficiency, and sustainability. We aim to be a trusted partner, leveraging our expertise to create transformative experiences that propel businesses to new heights. Through our dedication to innovation, collaboration, and customer satisfaction, we strive to build lasting relationships that make a positive impact on our clients' success.",
       "values": {
         "innovation": "Innovation",
         "excellence": "Excellence",
@@ -62,7 +62,7 @@
     },
     "vision": {
       "title": "Our Vision",
-      "description": "Our Vision Is To Lead The Charge In Digital Transformation By Developing Pioneering Solutions That Shape The Future. We Envision A World Where Our Expertise In Web And Mobile Developments, AI, Blockchain, Machine Learning, And Mobile App Management Empowers Businesses Across Industries To Embrace Innovation, Optimize Operations, And Create Lasting Value.",
+      "description": "Our Vision Is To Lead The Charge In Digital Transformation By Developing Pioneering Solutions That Shape The Future. We Envision A World Where Our Expertise In Web And Mobile Development, AI, Blockchain, Machine Learning, And Mobile App Management Empowers Businesses Across Industries To Embrace Innovation, Optimize Operations, And Create Lasting Value.",
       "points": {
         "service": "Service",
         "requirements": "Requirements",
@@ -79,11 +79,11 @@
     },
     "web-mobile-app": {
       "title": "Web & Mobile App Development",
-      "subtitle": "Viganium creates powerful mobile applications that offer seamless user experiences."
+      "subtitle": "Viganium creates powerful web and mobile applications designed to deliver seamless and engaging user experiences."
     },
     "ai-automation": {
       "title": "AI Automation",
-      "subtitle": "Everything you need to start your business with intelligent automation solutions."
+      "subtitle": "Viganium AI Automation service adapts to your unique needs."
     },
     "marketing": {
       "title": "Marketing",
@@ -170,16 +170,16 @@
   "aboutHeader": {
     "heading": "Great Products Are Built By",
     "highlight": "Great Teams",
-    "description": "Over the past decade, we've redefined the union of digital design and personalised experiences. Our team is dedicated to helping innovators & organisations of all sizes convert their ideas to reality.",
+    "description": "Over the past decade, we've redefined the union of digital design and personalised experiences. Our team is dedicated to helping innovators & organisations of all sizes convert their ideas into reality.",
     "imageAlt": "Team working together"
   },
   "aboutVision": {
     "missionTitle": "Our Mission",
     "missionDescription": "At Viganium, our mission is to empower our clients with cutting-edge technology solutions that drive growth, efficiency, and sustainability. We aim to be a trusted partner, leveraging our expertise to create transformative experiences that propel businesses to new heights. Through our dedication to innovation, collaboration, and customer satisfaction, we strive to build lasting relationships that make a positive impact on our clients' success.",
     "visionTitle": "Our Vision",
-    "visionDescription": "Our vision is to lead the charge in digital transformation by developing pioneering solutions that shape the future. We envision a world where our expertise in web and mobile developments, AI, blockchain, machine learning, and mobile app management empowers businesses across industries to embrace innovation, optimize operations, and create lasting value.",
+    "visionDescription": "Our vision is to lead the charge in digital transformation by developing pioneering solutions that shape the future. We envision a world where our expertise in web and mobile development, AI, blockchain, machine learning, and mobile app management empowers businesses across industries to embrace innovation, optimize operations, and create lasting value.",
     "historyTitle": "Our History",
-    "historyDescription": "Viganium was founded in 2014, born out of a passion for innovation and a commitment to solving complex business challenges through technology. Established by a team of seasoned software developers and entrepreneurs, the company was created with a vision to provide cutting-edge software solutions tailored to meet the evolving needs of modern businesses. The idea for Vigtas emerged when the founders noticed a growing gap in the market for reliable, scalable, and customizable software solutions. This realization led them to form a company that would not only meet but exceed the expectations of clients across various industries. Since its inception, Vigtas has focused on delivering high-quality software that empowers businesses to streamline operations, enhance productivity, and drive growth. With a commitment to excellence and innovation, Vigtas has grown steadily, developing a reputation for delivering value-driven solutions and exceptional customer service. Today, Vigtas stands as a trusted technology partner for companies looking to stay ahead in an ever-evolving digital landscape."
+    "historyDescription": "Viganium was founded in 2014, born out of a passion for innovation and a commitment to solving complex business challenges through technology. Established by a team of seasoned software developers and entrepreneurs, the company was created with a vision to provide cutting-edge software solutions tailored to meet the evolving needs of modern businesses. The idea for Viganium emerged when the founders noticed a growing gap in the market for reliable, scalable, and customizable software solutions. This realization led them to form a company that would not only meet but exceed the expectations of clients across various industries. Since its inception, Viganium has focused on delivering high-quality software that empowers businesses to streamline operations, enhance productivity, and drive growth. With a commitment to excellence and innovation, Viganium has grown steadily, developing a reputation for delivering value-driven solutions and exceptional customer service. Today, Viganium stands as a trusted technology partner for companies looking to stay ahead in an ever-evolving digital landscape."
   },
   "techSection": {
     "title": "Our Technology",
@@ -290,7 +290,7 @@
       "carRental": {
         "title": "Car Rental Services",
         "highlight": "Car",
-        "description": "Vigtas offers comprehensive software solutions for car rental companies, enabling them to manage fleets, bookings, accounts, and billing for a smoother experience."
+        "description": "Viganium offers comprehensive software solutions for car rental companies, enabling them to manage fleets, bookings, accounts, and billing for a smoother experience."
       },
       "cleaning": {
         "title": "Cleaning Companies",

@@ -18,9 +18,9 @@ const Footer = () => {
   const t = useTranslations("footer");
 
   const socialLinks = [
-    { icon: facebook, link: 'https://www.facebook.com/viganium' },
-    { icon: instagram, link: 'https://www.instagram.com/viganiumco/' },
-    { icon: linkedin, link: 'https://www.linkedin.com/company/viganiuminc' },
+    // { icon: facebook, link: 'https://www.facebook.com/viganium' },
+    // { icon: instagram, link: 'https://www.instagram.com/viganiumco/' },
+    // { icon: linkedin, link: 'https://www.linkedin.com/company/viganiuminc' },
     // { icon: snapchat, link: '' }, // Add snapchat link if available
     // { icon: tiktok, link: '' } // Add tiktok link if available
   ];

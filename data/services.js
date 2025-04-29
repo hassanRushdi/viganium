@@ -42,7 +42,7 @@ export const services = [
     id: "web-mobile-app",
     titleKey: "Web & Mobile App Development",
     subtitleKey:
-      "Viganium creates powerful mobile applications that offer seamless user experiences.",
+      "Viganium creates powerful web and mobile applications designed to deliver seamless and engaging user experiences.",
     image: "/images/services/software.png",
     tags: [
       "ux audit",
