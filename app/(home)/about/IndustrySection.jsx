@@ -90,10 +90,10 @@ const IndustrySection = () => {
                 priority
                 className="w-full h-[215px] object-cover border border-brand-800 rounded-xl mb-6"
               />
-              <h3 className="text-[32px] font-semibold mb-4" dir="rtl">
+              <h3 className="text-[32px] font-semibold mb-4" >
                 {highlightFirstWord(item.title)}
               </h3>
-              <p className="text-[16px] 2xl:text-[20px] leading-[32px] text-[#616161] flex-grow" dir="rtl">
+              <p className="text-[16px] 2xl:text-[20px] leading-[32px] text-[#616161] flex-grow" >
                 {item.description}
               </p>
             </div>
