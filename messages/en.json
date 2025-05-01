@@ -328,7 +328,8 @@
       "email": "Your email",
       "company": "Your company",
       "message": "Write message here",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "submitting": "Submitting..."
     },
     "errors": {
       "name": "Name is required",
