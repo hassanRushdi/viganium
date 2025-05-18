@@ -6,7 +6,7 @@ const locales = ['en', 'ar'];
 const defaultLocale = 'en';
 
 export default getRequestConfig(async () => {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const localeCookie = cookieStore.get('NEXT_LOCALE');
   const locale = localeCookie?.value || defaultLocale;
   

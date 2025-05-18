@@ -6,6 +6,7 @@ import TechSection from './TechSection'
 import ValuesSection from './ValuesSection'
 import PartnershipsSection from './PartnershipsSection'
 import IndustrySection from './IndustrySection'
+import ClientsSection from './ClientsAbout'
 
 const AboutPage = () => {
   return (
@@ -21,6 +22,7 @@ const AboutPage = () => {
     </div>
     <TechSection />
     <ValuesSection />
+    <ClientsSection/>
     <PartnershipsSection />
     <IndustrySection />
     </>

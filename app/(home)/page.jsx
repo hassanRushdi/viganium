@@ -1,8 +1,7 @@
-import React from 'react'
-import SliderSection from './SliderSection'
-import ServicesSection from './ServicesSection'
 import AboutUsSection from './AboutUsSection'
-import IndustrySection from './about/IndustrySection'
+import ClientsSection from './ClientsSection'
+import ServicesSection from './ServicesSection'
+import SliderSection from './SliderSection'
 
 const HomePage = () => {
   return (
@@ -11,6 +10,7 @@ const HomePage = () => {
       <AboutUsSection />
 
       <ServicesSection />
+      <ClientsSection  />
     </div>
   )
 }

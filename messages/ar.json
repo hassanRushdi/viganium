@@ -350,5 +350,35 @@
       "emailValue": "info@viganium.com",
       "addressValue": "8 برج سما T N، الطريق الدائري، القاهرة، مصر"
     }
+  }, 
+  "clients": {
+    "title": "عملاؤنا",
+    "heading": {
+      "prefix": "عملاؤنا",
+      "suffix": ""
+    },
+    "list": [
+      {
+        "name": "الغزال",
+        "description": "شركة الغزال لتأجير السيارات في المملكة العربية السعودية",
+        "logo": "/assets/images/client/1.png"
+      },
+      {
+        "name": "كلين تكنيك",
+        "description": "شركة كلين تكنيك للتنظيف في المملكة العربية السعودية",
+        "logo": "/assets/images/client/5.png"
+      },
+      {
+        "name": "المقام",
+        "description": "شركة المقام لتأجير السيارات في السعودية",
+        "logo": "/assets/images/client/3.png"
+      },
+      {
+        "name": "بلد الأمين",
+        "description": "شركة بلد الأمين للتنظيف في المملكة العربية السعودية",
+        "logo": "/assets/images/client/4.png"
+      }
+    ]
   }
 }
+ 

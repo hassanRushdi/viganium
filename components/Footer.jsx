@@ -73,7 +73,7 @@ const Footer = () => {
           <h3 className="text-brand-900 font-semibold mb-4">
             {t("quickLinks")}
           </h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-4 text-sm">
             {links.map(({ key, href }) => (
               <li key={key}>
                 <Link

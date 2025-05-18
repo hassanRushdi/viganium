@@ -350,5 +350,34 @@
       "emailValue": "info@viganium.com",
       "addressValue": "8 T N Sama Tower, The Ring Road, Cairo, Egypt"
     }
+  },
+  "clients": {
+    "title": "Our Clients",
+    "heading": {
+      "prefix": "Our",
+      "suffix": "Clients"
+    },
+    "list": [
+      {
+        "name": "Al Ghazal",
+        "description": "Al-Ghazal Car Rental Company In The Kingdom Of Saudi Arabia",
+        "logo": "/assets/images/client/1.png"
+      },
+      {
+        "name": "Clean Technique",
+        "description": "CleanTechnique Cleaning Company In The Kingdom Of Saudi Arabia",
+        "logo": "/assets/images/client/2.png"
+      },
+      {
+        "name": "Al Maqam",
+        "description": "Al-Maqam Car Rental Company In Saudi Arabia",
+        "logo": "/assets/images/client/3.png"
+      },
+      {
+        "name": "Balad Al Amin",
+        "description": "Balad Al-Ameen Cleaning Company In The Kingdom Of Saudi Arabia",
+        "logo": "/assets/images/client/1.png"
+      }
+    ]
   }
 }

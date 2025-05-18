@@ -52,7 +52,7 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service) => (
             <Link key={service.id} href={`/services`}>
-              <div className="cursor-pointer bg-white border border-[#F0D5D4] rounded-lg shadow-sm overflow-hidden flex flex-col h-full hover:bg-[#222641] hover:text-white transition-all">
+              <div className="cursor-pointer bg-white border border-[#F0D5D4] rounded-lg shadow-sm overflow-hidden flex flex-col h-full hover:bg-[#222641] hover:text-white [&_p]:hover:text-[#fff] transition-all duration-500">
                 <div className="p-6 flex-grow">
                   <div className="mb-4">
                     {serviceIcons[service.id] || <div className="h-16" />}
